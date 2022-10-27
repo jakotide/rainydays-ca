@@ -1,13 +1,6 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: bisque;
-}
-
-.wrapper {
-  width: auto;
-  max-width: 1400;
-  margin: 0 auto;
 }
 
 /*---------
@@ -47,7 +40,6 @@ Navbar/header
   display: block;
   max-width: 10rem;
   padding: 10px 20px;
-  margin-left: 11rem;
 }
 
 .header .menu {
@@ -125,9 +117,47 @@ Menu icon dropdown
   top: 0;
 }
 
+/*----------------
+Main
+-----------------*/
+
+.hero-img {
+  background-image: url(../images/mainheader.jpg);
+  height: 75vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  top: 65px;
+  background-position-y: 40%;
+}
+
+h1 {
+  top: 18%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  color: white;
+  position: absolute;
+  text-align: left;
+  padding-left: 2em;
+  font-size: 2.9em;
+  font-family: Playfair Display;
+  font-weight: 900;
+}
+
 /*-----------------
 Media querys
 ----------------*/
+
+@media only screen and (max-width: 400px) {
+}
+h1 {
+  color: black;
+}
 
 @media (min-width: 768px) {
   .header li {
@@ -145,9 +175,15 @@ Media querys
     display: flex;
     justify-content: center;
     max-height: none;
+    margin-right: 4em;
   }
 
   .header .menu-icon {
     display: none;
+  }
+
+  h1 {
+    font-size: 4em;
+    color: white;
   }
 }
