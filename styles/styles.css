@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: bisque;
+}
+
+.wrapper {
+  width: auto;
+  max-width: 1400;
+  margin: 0 auto;
+}
+
+/*---------
+Navbar/header
+---------- */
+
+.header {
+  background-color: #1f605c;
+  box-shadow: 1.5px 1.5px 5px 0 rgba(0, 0, 0, 0.4);
+  position: fixed;
+
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header ul a {
+  display: block;
+  outline: 1px solid white;
+  padding: 20px;
+}
+
+.header ul a:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #1f605c;
+}
+
+.header .logo {
+  float: left;
+  display: block;
+  max-width: 10rem;
+  padding: 10px 20px;
+  margin-left: 11rem;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*-------------
+Menu icon dropdown
+---------------*/
+
+.header .menu-icon {
+  padding: 35px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+  background: white;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon::before {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon::after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: -5px;
+}
+
+.header .menu-button {
+  display: none;
+}
+
+.header .menu-button:checked ~ .menu {
+  max-height: 300px;
+}
+
+.header .menu-button:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-button:checked ~ .menu-icon .nav-icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-button:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/*-----------------
+Media querys
+----------------*/
+
+@media (min-width: 768px) {
+  .header li {
+    float: left;
+    padding-top: 6px;
+  }
+
+  .header li a {
+    padding: 20px 25px;
+    outline: none;
+  }
+
+  .header .menu {
+    clear: none;
+    display: flex;
+    justify-content: center;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+}
