@@ -1,6 +1,9 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  color: #1f605c;
 }
 
 /*---------
@@ -123,43 +126,105 @@ Main
 
 .hero-img {
   background-image: url(../images/mainheader.jpg);
-  height: 75vh;
+  height: 60vh;
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
+
   background-size: cover;
   position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  top: 65px;
-  background-position-y: 40%;
+  background-position-x: 60%;
+  background-position-y: 10%;
+  top: 50px;
 }
 
-h1 {
-  top: 18%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  color: white;
+.hero-text {
   position: absolute;
   text-align: left;
-  padding-left: 2em;
-  font-size: 2.9em;
+  top: 20px;
+  left: 30px;
+  color: white;
   font-family: Playfair Display;
   font-weight: 900;
+  font-size: 3rem;
+}
+
+.cta {
+  padding-top: 49px;
+  text-align: center;
+}
+
+.cta-button {
+  color: white;
+  background-color: #1f605c;
+  display: block;
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  padding-top: 10px;
+  text-align: center;
+  line-height: 1.1em;
+  font-size: 1rem;
+  margin: 6px auto;
+}
+
+.cta p {
+  font-weight: bold;
+}
+
+.mid-text {
+  text-align: center;
+  font-family: Playfair display;
+  margin-top: 55px;
+}
+
+.explore {
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 40px;
+}
+
+.container {
+  text-align: center;
+}
+
+.block {
+  display: inline-block;
+  width: 150px;
+  height: 230px;
+  border: solid 1px #1f605c;
+
+  margin: 5px;
+}
+
+.block img {
+  width: 120px;
+  height: 150px;
+  padding: 10px 0px 0px 0px;
+}
+
+.block div {
+  text-align: left;
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.block p {
+  margin-bottom: 8px;
 }
 
 /*-----------------
 Media querys
 ----------------*/
 
-@media only screen and (max-width: 400px) {
-}
-h1 {
-  color: black;
+/* Tablet */
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
 }
 
-@media (min-width: 768px) {
+/* Desktop */
+
+@media (min-width: 769px) {
   .header li {
     float: left;
     padding-top: 6px;
