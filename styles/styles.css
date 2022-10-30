@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, sans-serif;
   color: #1f605c;
 }
 
@@ -41,8 +41,14 @@ Navbar/header
 .header .logo {
   float: left;
   display: block;
-  max-width: 10rem;
-  padding: 10px 20px;
+  padding: 24px 0px 20px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.d {
+  color: #fa7455;
 }
 
 .header .menu {
@@ -141,7 +147,7 @@ Main
 .hero-text {
   position: absolute;
   text-align: left;
-  top: 20px;
+  top: 12px;
   left: 30px;
   color: white;
   font-family: Playfair Display;
@@ -150,7 +156,7 @@ Main
 }
 
 .cta {
-  padding-top: 49px;
+  padding-top: 42px;
   text-align: center;
 }
 
@@ -163,20 +169,21 @@ Main
   border-radius: 5px;
   padding-top: 10px;
   text-align: center;
-  line-height: 1.1em;
-  font-size: 1rem;
-  margin: 6px auto;
+  font-size: 0.9rem;
+  margin: 4px auto;
 }
 
 .cta p {
-  font-weight: bold;
+  margin: 18px 0 10px 0;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .mid-text {
   text-align: center;
   font-family: Playfair display;
   font-weight: 600;
-  margin-top: 55px;
+  margin: 110px 0 90px;
 }
 
 .explore,
@@ -185,6 +192,7 @@ Main
   margin-top: 55px;
   margin-bottom: 15px;
   font-weight: bold;
+  font-family: Roboto;
 }
 
 .container,
@@ -211,11 +219,17 @@ Main
   text-align: left;
   padding-left: 8px;
   font-weight: bold;
+  font-size: 16px;
 }
 
 .block p {
-  margin-bottom: 8px;
+  margin-bottom: 3px;
+  font-size: 14px;
 }
+
+/*-----------
+About us/Sale
+------------*/
 
 .img-container {
   position: relative;
@@ -359,6 +373,9 @@ footer ul li,
   position: absolute;
   width: 35%;
   right: 3em;
+  bottom: 20px;
+  right: 13px;
+  max-width: 90px;
 }
 
 /*-----------------
