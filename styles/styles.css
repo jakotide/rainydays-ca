@@ -12,6 +12,7 @@ Fonts
 
 .hero-text,
 .mid-text,
+.mid-text-top,
 .reviews,
 .abouth1,
 .about-cta {
@@ -188,10 +189,18 @@ Main
   font-weight: 600;
 }
 
+.mid-text-top {
+  margin: 90px 0 90px;
+}
+
 .mid-text {
+  margin: 110px 0 90px;
+}
+
+.mid-text,
+.mid-text-top {
   text-align: center;
   font-weight: 600;
-  margin: 110px 0 90px;
 }
 
 .explore,
@@ -211,15 +220,14 @@ Main
 .block {
   display: inline-block;
   width: 150px;
-  height: 230px;
+  height: 220px;
   border: solid 1px #1f605c;
-
   margin: 5px;
 }
 
 .block img {
   width: 120px;
-  height: 150px;
+  height: 140px;
   padding: 10px 0px 0px 0px;
 }
 
@@ -377,6 +385,16 @@ footer ul li,
   position: relative;
 }
 
+footer li {
+  position: relative;
+}
+
+footer a {
+  height: 30px;
+  width: 200px;
+  position: absolute;
+}
+
 .footer-logo {
   position: absolute;
   width: 35%;
@@ -390,7 +408,9 @@ footer ul li,
 About us page
 --------------*/
 
-.abouth1 {
+.abouth1,
+.contact-h1,
+.products-h1 {
   position: relative;
   padding: 100px 0 20px 0;
   color: #1f605c;
@@ -399,12 +419,14 @@ About us page
 }
 
 .about-p,
-.about-cta p {
+.about-cta p,
+.contact-info {
   padding: 20px;
   font-size: 14px;
   text-align: left;
-  width: 60%;
+  width: 80%;
   margin: 0 auto 0 auto;
+  line-height: 28px;
 }
 
 .img-about {
@@ -417,24 +439,91 @@ About us page
 }
 
 .about-cta {
-  height: 40vh;
-  margin: 20px 0 40px 0;
+  height: 35vh;
+  margin: 20px 0 30px 0;
   color: white;
 }
 
 .about-cta p {
   font-size: 30px;
   text-align: center;
+  line-height: 40px;
 }
 
 .cnt-shop {
   border: white solid 1px;
   display: block;
-  margin: 20px auto 0 auto;
+  margin: 7px auto;
   width: 50%;
   text-align: center;
   padding: 7px;
   font-family: roboto, sans-serif;
+}
+
+/*------------
+Contact Page
+-------------*/
+
+.contact-info div {
+  margin: 0 0 10px 15px;
+}
+
+.phone,
+.email {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.open {
+  font-size: 12px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 74%;
+  margin: 20px auto 50px auto;
+}
+
+.textarea {
+  height: 50px;
+}
+
+.send-btn {
+  margin-top: 20px;
+  color: white;
+  background-color: #1f605c;
+  border: none;
+  padding: 12px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/*----------- 
+Products Page
+------------*/
+
+.products-h1 {
+  font-size: 1.6em;
+  word-spacing: 4px;
+}
+
+.select-form {
+  margin: 0 0 30px 35px;
+}
+
+.selecter {
+  color: #1f605c;
+  border: none;
+  margin-left: 5px;
+  text-decoration: underline;
+  width: 65px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.label-products {
+  font-size: 14px;
 }
 
 /*-----------------
