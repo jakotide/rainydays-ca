@@ -6,6 +6,18 @@ body {
   color: #1f605c;
 }
 
+/*-----------
+Fonts
+----------- */
+
+.hero-text,
+.mid-text,
+.reviews,
+.abouth1,
+.about-cta {
+  font-family: Playfair display, sans-serif;
+}
+
 /*---------
 Navbar/header
 ---------- */
@@ -14,7 +26,6 @@ Navbar/header
   background-color: #1f605c;
   box-shadow: 1.5px 1.5px 5px 0 rgba(0, 0, 0, 0.4);
   position: fixed;
-
   width: 100%;
   z-index: 3;
 }
@@ -136,7 +147,6 @@ Main
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-
   background-size: cover;
   position: relative;
   background-position-x: 60%;
@@ -150,7 +160,6 @@ Main
   top: 12px;
   left: 30px;
   color: white;
-  font-family: Playfair Display;
   font-weight: 900;
   font-size: 3rem;
 }
@@ -181,7 +190,6 @@ Main
 
 .mid-text {
   text-align: center;
-  font-family: Playfair display;
   font-weight: 600;
   margin: 110px 0 90px;
 }
@@ -291,21 +299,21 @@ About us/Sale
   color: #fa7455;
   text-transform: uppercase;
   width: 84%;
-  padding: 0.7em 1.5em;
+  padding: 0.7em 20px;
   margin-left: auto;
   margin-right: auto;
   display: block;
   text-align: center;
-  margin-bottom: 25px;
+  margin: 0 0 25px 0;
   font-size: 12px;
 }
 
-.reviews {
+.reviews,
+.about-cta {
   background-color: #7eae98;
   width: 100%;
   height: 30vh;
   margin-bottom: 40px;
-  font-family: Playfair Display;
   font-weight: 600;
 }
 
@@ -376,6 +384,57 @@ footer ul li,
   bottom: 20px;
   right: 13px;
   max-width: 90px;
+}
+
+/*-------------
+About us page
+--------------*/
+
+.abouth1 {
+  position: relative;
+  padding: 100px 0 20px 0;
+  color: #1f605c;
+  margin: 0;
+  text-align: center;
+}
+
+.about-p,
+.about-cta p {
+  padding: 20px;
+  font-size: 14px;
+  text-align: left;
+  width: 60%;
+  margin: 0 auto 0 auto;
+}
+
+.img-about {
+  height: 40vh;
+  width: 80%;
+  margin-top: 10px auto 10px auto;
+  background-position: center;
+  background-size: cover;
+  padding: 10px 0 20px 40px;
+}
+
+.about-cta {
+  height: 40vh;
+  margin: 20px 0 40px 0;
+  color: white;
+}
+
+.about-cta p {
+  font-size: 30px;
+  text-align: center;
+}
+
+.cnt-shop {
+  border: white solid 1px;
+  display: block;
+  margin: 20px auto 0 auto;
+  width: 50%;
+  text-align: center;
+  padding: 7px;
+  font-family: roboto, sans-serif;
 }
 
 /*-----------------
