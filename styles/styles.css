@@ -46,8 +46,8 @@ Navbar/header
 
 .header ul a:hover {
   cursor: pointer;
-  background-color: white;
-  color: #1f605c;
+  background-color: #fa7455;
+  color: white;
 }
 
 .header .logo {
@@ -271,6 +271,11 @@ Products Page
   font-size: 14px;
 }
 
+.block p,
+.block div {
+  color: #1f605c;
+}
+
 /*-----------
 Product Specific Page
 ------------*/
@@ -346,7 +351,7 @@ Checkout Page
 
 .order-summary {
   font-size: 16px;
-  margin: 10px 0 10px 50px;
+  margin: 0 0 10px 50px;
 }
 
 .check-block {
@@ -365,6 +370,7 @@ Checkout Page
 
 .summary {
   margin-bottom: 10px;
+  height: 130px;
 }
 
 .summary,
@@ -373,7 +379,6 @@ Checkout Page
   display: flex;
   align-items: center;
   border-bottom: #1f605c solid 1px;
-  height: 130px;
 }
 
 .summary-right {
@@ -384,16 +389,16 @@ Checkout Page
   line-height: 30px;
 }
 
-.shipping div {
-  margin-left: 50px;
+.shipping {
+  text-align: center;
   padding-bottom: 10px;
   width: 50%;
 }
 
-.cost-shipping div {
-  display: block;
-  margin-left: 180px;
+.cost-shipping {
+  text-align: center;
   padding-bottom: 10px;
+  width: 50%;
 }
 
 .subtotal {
@@ -429,6 +434,27 @@ Checkout Page
   border-radius: 1px;
 }
 
+/*------------
+Success Page
+-------------*/
+
+.success-p1,
+.success-p2 {
+  text-align: center;
+  margin: 40px auto 20px;
+  width: 50%;
+}
+
+.success-btn {
+  display: block;
+  background-color: #1f605c;
+  width: 50%;
+  text-align: center;
+  padding: 10px 0;
+  margin: 70px auto;
+  border-radius: 4px;
+}
+
 /*-----------
 About us/Sale
 ------------*/
@@ -445,7 +471,7 @@ About us/Sale
   width: 90%;
   margin-top: 10px;
   background-position: center;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .img-block h2 {
@@ -463,7 +489,7 @@ About us/Sale
 }
 
 .fall-section {
-  text-align: left;
+  text-align: center;
   color: #fa7455;
   padding: 4em 4em 1.5em 4em;
 }
@@ -492,13 +518,12 @@ About us/Sale
   border: #fa7455 solid 1px;
   color: #fa7455;
   text-transform: uppercase;
-  width: 84%;
+  width: 80%;
   padding: 0.7em 20px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   display: block;
   text-align: center;
-  margin: 0 0 25px 0;
+
   font-size: 12px;
 }
 
@@ -694,11 +719,23 @@ Media querys
 /* Tablet */
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+  .hero-text {
+    position: absolute;
+    text-align: left;
+    padding-left: 40px;
+    margin: 40px auto;
+    color: white;
+    font-weight: 900;
+    font-size: 3.4rem;
+    max-width: 470px;
+  }
 }
 
 /* Desktop */
 
 @media (min-width: 769px) {
+  /* Navbar */
+
   .header li {
     float: left;
     padding-top: 6px;
@@ -724,5 +761,117 @@ Media querys
   h1 {
     font-size: 4em;
     color: white;
+  }
+
+  /* Main */
+
+  .hero-img {
+    background-image: url(../images/mainheader.jpg);
+    height: 70vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position-x: 60%;
+    background-position-y: 40%;
+    top: 50px;
+    object-fit: cover;
+  }
+
+  .hero-text {
+    position: absolute;
+    text-align: left;
+    padding-left: 80px;
+    margin: 40px auto;
+    color: white;
+    font-weight: 900;
+    font-size: 3.7rem;
+    max-width: 500px;
+  }
+
+  .cta-button:hover {
+    background-color: #fa7455;
+    color: white;
+  }
+}
+
+/* Larger desktop */
+
+@media (min-width: 1070px) {
+  .hero-img {
+    background-image: url(../images/mainheader.jpg);
+    height: 76vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position-x: 60%;
+    background-position-y: 38%;
+    top: 50px;
+    object-fit: cover;
+  }
+
+  .hero-text {
+    position: absolute;
+    text-align: left;
+    padding-left: 120px;
+    margin: 40px auto;
+    color: white;
+    font-weight: 900;
+    font-size: 4.5rem;
+    max-width: 500px;
+  }
+
+  .img-container {
+    display: flex;
+    color: white;
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 60px;
+  }
+
+  .img-block a img,
+  .img-block-two a img {
+    height: 50vh;
+    width: 110%;
+    margin-top: 10px;
+    object-fit: cover;
+  }
+
+  .img-block h2 {
+    position: absolute;
+    top: 45%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+  }
+
+  .img-block-two h2 {
+    position: absolute;
+    top: 45%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+  }
+
+  .fall-section {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* 1250-Above */
+
+@media (min-width: 1250px) {
+  .hero-text {
+    position: absolute;
+    text-align: left;
+    padding-left: 230px;
+    margin: 30px auto;
+    color: white;
+    font-weight: 900;
+    font-size: 5.5rem;
+    max-width: 600px;
   }
 }
