@@ -248,6 +248,11 @@ Main
 Products Page
 ------------*/
 
+.container {
+  max-width: 670px;
+  margin: 0 auto;
+}
+
 .products-h1 {
   font-size: 1.6em;
   word-spacing: 4px;
@@ -279,6 +284,11 @@ Products Page
 /*-----------
 Product Specific Page
 ------------*/
+
+.ps-main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 .block-specific {
   display: inline-block;
@@ -348,6 +358,11 @@ Product Specific Page
 /*-----------
 Checkout Page
 -------------*/
+
+.main-checkout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 .order-summary {
   font-size: 16px;
@@ -492,6 +507,8 @@ About us/Sale
   text-align: center;
   color: #fa7455;
   padding: 4em 4em 1.5em 4em;
+  max-width: 480px;
+  margin: 0 auto 30px;
 }
 
 .fall-section h2,
@@ -509,7 +526,6 @@ About us/Sale
 }
 
 .fall-section p {
-  margin-top: 0px;
   line-height: 26px;
   font-size: 15px;
 }
@@ -520,11 +536,10 @@ About us/Sale
   text-transform: uppercase;
   width: 80%;
   padding: 0.7em 20px;
-  margin: 0 auto;
   display: block;
   text-align: center;
-
   font-size: 12px;
+  margin: 0 auto;
 }
 
 .reviews,
@@ -546,18 +561,19 @@ About us/Sale
 }
 
 .reviews h3 {
-  padding: 1.4em 0 0 4em;
+  padding-top: 1.4em;
   font-weight: 400;
   font-size: 16px;
 }
 
 .reviews img {
-  width: 24%;
+  width: 7em;
   padding: 0 0 0 4em;
 }
 
 .reviews div {
   font-size: 14px;
+  padding: 10px 0 0 4.7em;
 }
 
 /*---------
@@ -794,6 +810,22 @@ Media querys
     background-color: #fa7455;
     color: white;
   }
+
+  .disc-btn:hover {
+    color: white;
+    background-color: #fa7455;
+  }
+
+  /* Checkout Page */
+
+  .check-block {
+    width: 30%;
+    margin: 0 200px 0 100px;
+  }
+
+  .order-summary {
+    margin-left: 100px;
+  }
 }
 
 /* Larger desktop */
@@ -855,9 +887,8 @@ Media querys
     transform: translate(-50%, -50%);
   }
 
-  .fall-section {
-    max-width: 800px;
-    margin: 0 auto;
+  .select-form {
+    margin-left: 300px;
   }
 }
 
@@ -867,11 +898,53 @@ Media querys
   .hero-text {
     position: absolute;
     text-align: left;
-    padding-left: 230px;
+    padding-left: 220px;
     margin: 30px auto;
     color: white;
     font-weight: 900;
-    font-size: 5.5rem;
-    max-width: 600px;
+    font-size: 6rem;
+    max-width: 700px;
+  }
+
+  .reviews {
+    padding-left: 140px;
+  }
+
+  .reviews img {
+    width: 9em;
+  }
+
+  .reviews div,
+  .reviews h3 {
+    font-size: 18px;
+  }
+
+  .reviews p {
+    font-size: 20px;
+  }
+
+  .reviews h3,
+  .reviews p,
+  .reviews img {
+    padding-left: 85px;
+  }
+
+  .select-form {
+    margin-left: 470px;
+  }
+
+  /* Checkout */
+
+  .check-parent {
+    display: flex;
+  }
+
+  .check-large-right,
+  .check-large-left {
+    width: 50%;
+  }
+
+  .check-large-left {
+    margin-left: 50px;
   }
 }

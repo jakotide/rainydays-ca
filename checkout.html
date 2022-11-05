@@ -45,56 +45,59 @@
       </ul>
     </header>
 
-    <main>
+    <main class="main-checkout">
       <h1 class="checkout-h1">Checkout</h1>
+      <div class="check-parent">
+        <div class="check-large-left">
+          <h3 class="order-summary">Order Summary</h3>
+          <section class="summary">
+            <div class="check-block">
+              <img
+                class="check-img"
+                src="images/jacket1.png"
+                alt="Checkout Product"
+              />
+            </div>
+            <div class="summary-right">
+              <div>Wind Jakcet - Red</div>
+              <div>Sise: Small</div>
+              <div>Qty: 1</div>
+            </div>
+          </section>
 
-      <h3 class="order-summary">Order Summary</h3>
+          <section class="subtotal">
+            <div class="shipping">
+              <div>Subtotal</div>
+              <div>Shipping</div>
+            </div>
+            <div class="cost-shipping">
+              <div>59£</div>
+              <div>Free</div>
+            </div>
+          </section>
 
-      <section class="summary">
-        <div class="check-block">
-          <img
-            class="check-img"
-            src="images/jacket1.png"
-            alt="Checkout Product"
-          />
+          <section class="total">
+            <div class="total-text">Total</div>
+            <div class="total-price">59£</div>
+          </section>
         </div>
-        <div class="summary-right">
-          <div>Wind Jakcet - Red</div>
-          <div>Sise: Small</div>
-          <div>Qty: 1</div>
+        <div class="check-large-right">
+          <section class="contact-form__section">
+            <form class="contact-form">
+              <label for="name">First Name</label>
+              <input type="text" id="firstname" />
+              <label for="name">Last Name</label>
+              <input type="text" id="lastname" />
+              <label for="email">Email</label>
+              <input type="text" id="email" />
+              <label for="address">Address</label>
+              <input type="address" id="address" />
+            </form>
+          </section>
+
+          <a href="success.html" class="buy-button">Buy</a>
         </div>
-      </section>
-
-      <section class="subtotal">
-        <div class="shipping">
-          <div>Subtotal</div>
-          <div>Shipping</div>
-        </div>
-        <div class="cost-shipping">
-          <div>59£</div>
-          <div>Free</div>
-        </div>
-      </section>
-
-      <section class="total">
-        <div class="total-text">Total</div>
-        <div class="total-price">59£</div>
-      </section>
-
-      <section class="contact-form__section">
-        <form class="contact-form">
-          <label for="name">First Name</label>
-          <input type="text" id="firstname" />
-          <label for="name">Last Name</label>
-          <input type="text" id="lastname" />
-          <label for="email">Email</label>
-          <input type="text" id="email" />
-          <label for="address">Address</label>
-          <input type="address" id="address" />
-        </form>
-      </section>
-
-      <a href="success.html" class="buy-button">Buy</a>
+      </div>
     </main>
 
     <!-- Footer -->
