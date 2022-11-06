@@ -466,8 +466,9 @@ Success Page
   width: 50%;
   text-align: center;
   padding: 10px 0;
-  margin: 70px auto;
+  margin: 70px auto 150px;
   border-radius: 4px;
+  max-width: 350px;
 }
 
 /*-----------
@@ -665,6 +666,7 @@ About us page
   background-position: center;
   background-size: cover;
   padding: 10px 0 20px 40px;
+  object-fit: cover;
 }
 
 .about-cta {
@@ -677,16 +679,23 @@ About us page
   font-size: 30px;
   text-align: center;
   line-height: 40px;
+  max-width: 420px;
 }
 
 .cnt-shop {
   border: white solid 1px;
   display: block;
-  margin: 7px auto;
+  margin: 15px auto 0;
   width: 50%;
   text-align: center;
   padding: 7px;
   font-family: roboto, sans-serif;
+  max-width: 330px;
+}
+
+.about-parent {
+  display: grid;
+  grid-template-columns: 4;
 }
 
 /*------------
@@ -816,6 +825,11 @@ Media querys
     background-color: #fa7455;
   }
 
+  .about-cta p {
+    font-size: 37px;
+    margin-bottom: 30px;
+  }
+
   /* Checkout Page */
 
   .check-block {
@@ -883,7 +897,7 @@ Media querys
   .img-block-two h2 {
     position: absolute;
     top: 45%;
-    left: 77%;
+    left: 79%;
     transform: translate(-50%, -50%);
   }
 
