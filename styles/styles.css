@@ -490,18 +490,20 @@ About us/Sale
   object-fit: cover;
 }
 
-.img-block h2 {
+.img-block h2,
+.img-block-two h2 {
   position: absolute;
-  top: 22%;
-  left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.img-block h2 {
+  top: 22%;
+  left: 50%;
+}
+
 .img-block-two h2 {
-  position: absolute;
   top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .fall-section {
@@ -640,7 +642,8 @@ About us page
 .contact-h1,
 .products-h1,
 .checkout-h1,
-.success-h1 {
+.success-h1,
+.account-h1 {
   position: relative;
   padding: 100px 0 20px 0;
   color: #1f605c;
@@ -715,18 +718,21 @@ Contact Page
   font-size: 12px;
 }
 
-.contact-form {
+.contact-form,
+.acc-form {
   display: flex;
   flex-direction: column;
   width: 74%;
   margin: 20px auto 50px auto;
+  max-width: 500px;
 }
 
 .textarea {
   height: 50px;
 }
 
-.send-btn {
+.send-btn,
+.acc-form button {
   margin-top: 20px;
   color: white;
   background-color: #1f605c;
@@ -814,14 +820,10 @@ Media querys
     max-width: 500px;
   }
 
-  .cta-button:hover {
-    background-color: #fa7455;
-    color: white;
-  }
-
+  .cta-button:hover,
   .disc-btn:hover {
-    color: white;
     background-color: #fa7455;
+    color: white;
   }
 
   .about-cta p {
@@ -856,6 +858,11 @@ Media querys
   .about-parent p {
     font-size: 18px;
     line-height: 48px;
+  }
+
+  .cnt-shop:hover {
+    color: #7eae98;
+    background-color: white;
   }
 }
 
@@ -988,10 +995,19 @@ Media querys
   }
 
   .contact-form__section {
-    margin-right: 100px;
+    margin: 0 80px;
+  }
+
+  .checkout-form {
+    width: 300px;
   }
 
   .about-parent p {
-    font-size: 22px;
+    font-size: 26px;
+  }
+
+  .about-cta p {
+    font-size: 44px;
+    margin-bottom: 30px;
   }
 }
