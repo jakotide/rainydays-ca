@@ -460,6 +460,7 @@ Success Page
   text-align: center;
   margin: 40px auto 20px;
   width: 50%;
+  font-size: 18px;
 }
 
 .success-btn {
@@ -584,11 +585,10 @@ Footer
 
 footer {
   width: 90%;
-  height: 30vh;
+  height: 200px;
   border-top: solid #ddb361;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   color: #1f605c;
 }
 
@@ -610,10 +610,7 @@ footer ul li,
   padding-left: 2.5em;
 }
 
-.logo-parent {
-  position: relative;
-}
-
+.logo-parent,
 footer li {
   position: relative;
 }
@@ -629,7 +626,6 @@ footer a {
   width: 35%;
   right: 3em;
   bottom: 20px;
-  right: 13px;
   max-width: 90px;
 }
 
@@ -644,9 +640,9 @@ About us page
 .success-h1,
 .account-h1 {
   position: relative;
-  padding: 100px 0 20px 0;
+  padding: 120px 0 20px 0;
   color: #1f605c;
-  margin: 0;
+  margin: 0 0 50px 0;
   text-align: center;
 }
 
@@ -927,6 +923,10 @@ Media querys
   .select-form {
     margin-left: 300px;
   }
+
+  .products-h1 {
+    font-size: 36px;
+  }
 }
 
 /* 1250-Above */
@@ -1009,5 +1009,12 @@ Media querys
   .about-cta p {
     font-size: 44px;
     margin-bottom: 30px;
+  }
+
+  .footer-bot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }
