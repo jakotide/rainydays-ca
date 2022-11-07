@@ -171,15 +171,21 @@ Main
   text-align: center;
 }
 
-.cta-button {
-  color: white;
+.cta-button,
+.ps-buy,
+.buy-button,
+.success-btn {
   background-color: #1f605c;
   display: block;
+  text-align: center;
+}
+
+.cta-button {
+  color: white;
   width: 130px;
   height: 30px;
   border-radius: 5px;
   padding-top: 10px;
-  text-align: center;
   font-size: 0.9rem;
   margin: 4px auto;
 }
@@ -339,9 +345,7 @@ Product Specific Page
 }
 
 .ps-buy {
-  background-color: #1f605c;
   width: 50%;
-  text-align: center;
   text-transform: uppercase;
 }
 
@@ -438,13 +442,10 @@ Checkout Page
 }
 
 .buy-button {
-  display: block;
-  background-color: #1f605c;
   margin: 0 auto 20px;
   font-weight: 600;
   padding: 10px 0;
   width: 75%;
-  text-align: center;
   text-transform: uppercase;
   border-radius: 1px;
 }
@@ -461,10 +462,7 @@ Success Page
 }
 
 .success-btn {
-  display: block;
-  background-color: #1f605c;
   width: 50%;
-  text-align: center;
   padding: 10px 0;
   margin: 70px auto 150px;
   border-radius: 4px;
