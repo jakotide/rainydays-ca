@@ -828,7 +828,10 @@ Media querys
   }
 
   .cta-button:hover,
-  .disc-btn:hover {
+  .disc-btn:hover,
+  .ps-buy:hover,
+  .buy-button:hover,
+  .success-btn:hover {
     background-color: #fa7455;
     color: white;
   }
