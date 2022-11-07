@@ -662,10 +662,9 @@ About us page
 .img-about {
   height: 40vh;
   width: 80%;
-  margin-top: 10px auto 10px auto;
+  margin: 10px auto;
   background-position: center;
   background-size: cover;
-  padding: 10px 0 20px 40px;
   object-fit: cover;
 }
 
@@ -840,6 +839,24 @@ Media querys
   .order-summary {
     margin-left: 100px;
   }
+
+  /* About us */
+
+  .about-parent {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 0 auto;
+  }
+
+  .about-parent img {
+    width: 90%;
+    margin-right: 200px;
+  }
+
+  .about-parent p {
+    font-size: 18px;
+    line-height: 48px;
+  }
 }
 
 /* Larger desktop */
@@ -949,16 +966,32 @@ Media querys
 
   /* Checkout */
 
-  .check-parent {
+  .check-parent,
+  .contact-parent {
     display: flex;
   }
 
   .check-large-right,
-  .check-large-left {
+  .check-large-left,
+  .contact-info,
+  .contact-form__section {
     width: 50%;
   }
 
   .check-large-left {
     margin-left: 50px;
+  }
+
+  .contact-info {
+    margin-left: 300px;
+    font-size: 22px;
+  }
+
+  .contact-form__section {
+    margin-right: 100px;
+  }
+
+  .about-parent p {
+    font-size: 22px;
   }
 }
