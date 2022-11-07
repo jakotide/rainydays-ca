@@ -266,6 +266,7 @@ Products Page
 
 .select-form {
   margin: 0 0 30px 35px;
+  width: 200px;
 }
 
 .selecter {
@@ -942,10 +943,6 @@ Media querys
     max-width: 700px;
   }
 
-  .reviews {
-    padding-left: 140px;
-  }
-
   .reviews img {
     width: 9em;
   }
@@ -961,8 +958,9 @@ Media querys
 
   .reviews h3,
   .reviews p,
-  .reviews img {
-    padding-left: 85px;
+  .reviews img,
+  .reviews div {
+    padding-left: 185px;
   }
 
   .select-form {
@@ -994,6 +992,10 @@ Media querys
 
   .contact-form__section {
     margin: 0 80px;
+  }
+
+  .contact-form__section input {
+    width: 350px;
   }
 
   .checkout-form {
