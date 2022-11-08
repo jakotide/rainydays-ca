@@ -20,7 +20,8 @@ Fonts
 }
 
 /*---------
-Navbar/header
+Navbar/header / Inspired by FollowAndrew's pure css menu tutorial on youtube. 
+Written some info on how it works in README.md
 ---------- */
 
 .header {
@@ -513,10 +514,14 @@ About us/Sale
 
 .fall-section {
   text-align: center;
-  color: #fa7455;
+  color: #ff512a;
   padding: 4em 4em 1.5em 4em;
   max-width: 480px;
   margin: 0 auto 30px;
+}
+
+.fall-section p {
+  color: #da2800;
 }
 
 .fall-section h2,
@@ -539,8 +544,8 @@ About us/Sale
 }
 
 .disc-btn {
-  border: #fa7455 solid 1px;
-  color: #fa7455;
+  border: #da2800 solid 1px;
+  color: #da2800;
   text-transform: uppercase;
   width: 80%;
   padding: 0.7em 20px;
@@ -755,13 +760,10 @@ Media querys
 
 /* Tablet */
 
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 481px) {
   .hero-text {
-    position: absolute;
-    text-align: left;
     padding-left: 40px;
     margin: 40px auto;
-    color: white;
     font-weight: 900;
     font-size: 3.4rem;
     max-width: 470px;
@@ -803,25 +805,14 @@ Media querys
   /* Main */
 
   .hero-img {
-    background-image: url(../images/mainheader.jpg);
     height: 70vh;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
     background-position-x: 60%;
     background-position-y: 40%;
-    top: 50px;
-    object-fit: cover;
   }
 
   .hero-text {
-    position: absolute;
-    text-align: left;
     padding-left: 80px;
     margin: 40px auto;
-    color: white;
     font-weight: 900;
     font-size: 3.7rem;
     max-width: 500px;
@@ -880,25 +871,14 @@ Media querys
 
 @media (min-width: 1070px) {
   .hero-img {
-    background-image: url(../images/mainheader.jpg);
     height: 76vh;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
     background-position-x: 60%;
     background-position-y: 38%;
-    top: 50px;
-    object-fit: cover;
   }
 
   .hero-text {
-    position: absolute;
-    text-align: left;
     padding-left: 120px;
     margin: 40px auto;
-    color: white;
     font-weight: 900;
     font-size: 4.5rem;
     max-width: 500px;
@@ -906,7 +886,6 @@ Media querys
 
   .img-container {
     display: flex;
-    color: white;
     font-size: 1.5rem;
     max-width: 800px;
     margin: 0 auto;
@@ -918,21 +897,16 @@ Media querys
     height: 50vh;
     width: 110%;
     margin-top: 10px;
-    object-fit: cover;
   }
 
   .img-block h2 {
-    position: absolute;
     top: 45%;
     left: 27%;
-    transform: translate(-50%, -50%);
   }
 
   .img-block-two h2 {
-    position: absolute;
     top: 45%;
     left: 79%;
-    transform: translate(-50%, -50%);
   }
 
   .select-form {
@@ -948,11 +922,8 @@ Media querys
 
 @media (min-width: 1250px) {
   .hero-text {
-    position: absolute;
-    text-align: left;
     padding-left: 220px;
     margin: 30px auto;
-    color: white;
     font-weight: 900;
     font-size: 6rem;
     max-width: 700px;
