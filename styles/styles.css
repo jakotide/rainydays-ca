@@ -655,11 +655,12 @@ About us page
 .products-h1,
 .checkout-h1,
 .success-h1,
-.account-h1 {
+.account-h1,
+.faq-h1 {
   position: relative;
-  padding: 120px 0 20px 0;
+  padding: 100px 0 20px 0;
   color: #1f605c;
-  margin: 0 0 50px 0;
+  margin: 0 0 20px 0;
   text-align: center;
 }
 
@@ -710,6 +711,27 @@ About us page
 .about-parent {
   display: grid;
   grid-template-columns: 4;
+}
+
+/* FAQ */
+
+.faq-h1 {
+  margin: 0 auto 20px;
+}
+
+.faq-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.faq-block {
+  border: #1f605c 1px;
+  border-style: solid none;
+  padding: 10px;
+}
+
+.faq-strong {
+  font-weight: bold;
 }
 
 /*------------
@@ -865,6 +887,14 @@ Media querys
     color: #7eae98;
     background-color: white;
   }
+
+  .products-h1 {
+    margin-bottom: 0;
+  }
+
+  .ps-main {
+    margin-bottom: 80px;
+  }
 }
 
 /* Larger desktop */
@@ -915,6 +945,11 @@ Media querys
 
   .products-h1 {
     font-size: 36px;
+  }
+
+  .aboutus {
+    max-width: 1100px;
+    margin: 0 auto;
   }
 }
 
@@ -973,19 +1008,34 @@ Media querys
 
   .contact-info {
     margin-left: 300px;
-    font-size: 22px;
+    font-size: 24px;
+  }
+
+  .open {
+    padding-top: 60px;
+    font-size: 16px;
+  }
+
+  .acc-form {
+    padding-top: 80px;
   }
 
   .contact-form__section {
     margin: 0 80px;
   }
 
-  .contact-form__section input {
+  .contact-form__section input,
+  .contact-form__section .textarea {
     width: 350px;
   }
 
   .checkout-form {
     width: 300px;
+  }
+
+  .contact-main {
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .about-parent p {
