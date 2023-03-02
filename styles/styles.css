@@ -1,9 +1,54 @@
-body {
-  margin: 0;
-  padding: 0;
+/* Custom Properties */
+
+:root {
+  --clr-orange: #fa7455;
+  --clr-green: #1f605c;
+  --clr-lightgreen: #a5cab9;
+  --clr-grey: #676767;
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  --ff-main: 'Poppins', sans-serif;
+  --ff-sec: 'Playfair Display', serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fw-xbold: 800;
+}
+
+/* CSS RESET */
+
+*, *::before, *::after {
   box-sizing: border-box;
-  font-family: Poppins, sans-serif;
-  color: #1f605c;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--ff-main);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
 }
 
 /*-----------
@@ -19,138 +64,77 @@ Fonts
   font-family: Playfair display, sans-serif;
 }
 
-/*---------
-Navbar/header / Inspired by FollowAndrew's pure css menu tutorial on youtube. 
-Written some info on how it works in README.md
----------- */
+/* Navbar */
 
-.header {
-  background-color: #1f605c;
-  box-shadow: 1.5px 1.5px 5px 0 rgba(0, 0, 0, 0.4);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-  display: grid;
-  grid-auto-flow: column;
+header {
+  background-color: var(--clr-green);
 }
 
-.header ul {
-  margin: 0;
-  padding: 0;
+li {
   list-style: none;
-  overflow: hidden;
-}
-
-.header ul a {
-  display: block;
-  outline: 1px solid white;
-  padding: 20px;
-  justify-content: center;
-  align-content: center;
-}
-
-.header ul a:hover {
-  cursor: pointer;
-  background-color: #fa7455;
-  color: white;
-}
-
-.header .logo {
-  padding: 24px 40px 40px 29px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: larger;
-  clear: both;
-  position: absolute;
-  top: -12px
-  
-  
-  
-}
-
-
-.d {
-  color: #fa7455;
-}
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
 }
 
 a {
-  color: white;
+  color: var(--clr-white);
   text-decoration: none;
 }
 
-.nav-icon {
-  margin-left: auto;
-  margin-right: 10px;
+a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fffcfc;
+  transition: width .2s ease-in;
 }
-/*-------------
-Menu icon dropdown
----------------*/
 
-.header .menu-icon {
-  padding: 35px 20px;
-  position: relative;
+a:hover::after {
+  width: 100%;
+}
 
+.navbar {
+  min-height: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5em;
+  margin: auto;
+  
+}
+
+.nav-logo {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: var(--fw-xbold);
+  padding-left: 2em;
+}
+
+.d {
+  color: var(--clr-orange);
+}
+
+.hamburger {
+  display: none;
   cursor: pointer;
 }
 
-.header .menu-icon .nav-icon {
-  background: white;
+.bar {
   display: block;
-  height: 2px;
-  width: 18px;
-  position: relative;
-  transition: background 0.2s ease-out;
+  width: 20px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--clr-white);
 }
 
-.header .menu-icon .nav-icon::before {
-  background: white;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: 5px;
-}
-
-.header .menu-icon .nav-icon::after {
-  background: white;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: -5px;
-}
-
-.header .menu-button {
-  display: none;
-}
-
-.header .menu-button:checked ~ .menu {
-  max-height: 300px;
-}
-
-.header .menu-button:checked ~ .menu-icon .nav-icon {
-  background: transparent;
-}
-
-.header .menu-button:checked ~ .menu-icon .nav-icon::before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.header .menu-button:checked ~ .menu-icon .nav-icon::after {
-  transform: rotate(45deg);
-  top: 0;
-}
 
 /*----------------
 Main
@@ -158,63 +142,68 @@ Main
 
 .hero-img {
   background-image: url(../images/mainheader.jpg);
-  height: 60vh;
-  width: 100%;
-  background-position: center;
+  height: 95vh;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-position-x: 60%;
-  background-position-y: 10%;
-  top: 50px;
-  object-fit: cover;
+  background-position: bottom 60% left 0;
+  display: grid;
 }
 
 .hero-text {
   position: absolute;
   text-align: left;
-  top: 12px;
-  left: 30px;
+  top: 25px;
+  left: 250px;  
   color: white;
-  font-weight: 900;
-  font-size: 3rem;
+  font-family: var(--ff-sec);
+  font-weight: var(--fw-xbold);
+  font-size: 8rem;
+  max-width: 900px;
 }
 
-.cta {
+/* .cta {
   padding-top: 42px;
   text-align: center;
-}
+} */
 
-.cta-button,
+/* .cta-button,
 .ps-buy,
 .buy-button,
 .success-btn {
   background-color: #1f605c;
   display: block;
   text-align: center;
+} */
+
+.btn-header {
+  position: absolute;
+  text-align: center;
+  align-self:flex-end;
+  justify-self: center;
+  margin-bottom: 100px;
+  display: flex;
+  gap: 1em;
 }
 
-.cta-button {
-  color: white;
-  width: 130px;
-  height: 30px;
-  border-radius: 5px;
-  padding-top: 10px;
-  font-size: 0.9rem;
-  margin: 4px auto;
+
+ .cta-button {
+  text-align: center;
+  padding: 0.6em 2em;
+  background-color: var(--clr-white);
+  color: var(--clr-green);
+  width: 170px;
+} 
+
+.mid-text-top, .mid-text {
+  margin: 7em 0;
+  font-size: 1.875rem;
+  color: var(--clr-green);
+  font-family: var(--ff-sec);
+  text-align: center;
 }
 
-.cta p {
-  margin: 18px 0 10px 0;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.mid-text-top {
-  margin: 90px 0 90px;
-}
-
-.mid-text {
+/* .mid-text {
   margin: 110px 0 90px;
 }
 
@@ -222,15 +211,17 @@ Main
 .mid-text-top {
   text-align: center;
   font-weight: 600;
-}
+} */
 
 .explore,
 .new-in {
+  color: var(--clr-green);
   text-align: center;
-  margin-top: 55px;
+  font-size: 1.25rem;
+  /* margin-top: 55px; */
   margin-bottom: 15px;
   font-weight: bold;
-  font-family: Roboto;
+  font-family: var(--ff-main);
 }
 
 .container,
@@ -570,7 +561,7 @@ About us/Sale
 
 .reviews,
 .about-cta {
-  background-color: #7eae98;
+  background-color:var(--clr-lightgreen);
   width: 100%;
   height: 30vh;
   margin-bottom: 40px;
@@ -795,53 +786,51 @@ Media querys
 
 /* Tablet */
 
-@media (min-width: 481px) {
-  .hero-text {
-    padding-left: 40px;
-    margin: 40px auto;
-    font-weight: 900;
-    font-size: 3.4rem;
-    max-width: 470px;
-  }
-}
+@media (max-width: 769px) {
 
-/* Desktop */
-
-@media (min-width: 769px) {
   /* Navbar */
-
-  .header li {
-    float: left;
-    padding-top: 6px;
+  
+  .hamburger {
+    display: block;
+    padding-right: 1rem;
   }
 
-  .header li a {
-    padding: 20px 25px;
-    outline: none;
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
   }
 
-  .header .menu {
-    clear: none;
-    display: flex;
-    justify-content: center;
-    max-height: none;
-    margin-right: 4em;
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
   }
 
-  .header .menu-icon {
-    display: none;
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
 
-  h1 {
-    font-size: 4em;
-    color: white;
+  .nav-menu {
+    position: fixed;
+    left: -100%; 
+    top:60px;
+    gap: 2px;
+    flex-direction: column;
+    background-color: var(--clr-green);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 55;
   }
 
-  .header .logo {
-    top: 1px;
+  .nav-item {
+    margin: 1em 0;
   }
-    
- 
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-logo {
+    padding-left: 1em;
+  }
 
   /* Main */
 
@@ -916,160 +905,3 @@ Media querys
   }
 }
 
-/* Larger desktop */
-
-@media (min-width: 1070px) {
-  .hero-img {
-    height: 76vh;
-    background-position-x: 60%;
-    background-position-y: 38%;
-  }
-
-  .hero-text {
-    padding-left: 120px;
-    margin: 40px auto;
-    font-weight: 900;
-    font-size: 4.5rem;
-    max-width: 500px;
-  }
-
-  .img-container {
-    display: flex;
-    font-size: 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
-    gap: 60px;
-  }
-
-  .img-block a img,
-  .img-block-two a img {
-    height: 50vh;
-    width: 110%;
-    margin-top: 10px;
-  }
-
-  .img-block h2 {
-    top: 45%;
-    left: 27%;
-  }
-
-  .img-block-two h2 {
-    top: 45%;
-    left: 79%;
-  }
-
-  .select-form {
-    margin-left: 300px;
-  }
-
-  .products-h1 {
-    font-size: 36px;
-  }
-
-  .aboutus {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-}
-
-/* 1250-Above */
-
-@media (min-width: 1250px) {
-  .hero-text {
-    padding-left: 220px;
-    margin: 30px auto;
-    font-weight: 900;
-    font-size: 6rem;
-    max-width: 700px;
-  }
-
-  .reviews img {
-    width: 9em;
-  }
-
-  .reviews div,
-  .reviews h3 {
-    font-size: 18px;
-  }
-
-  .reviews p {
-    font-size: 20px;
-  }
-
-  .reviews h3,
-  .reviews p,
-  .reviews img,
-  .reviews div {
-    padding-left: 185px;
-  }
-
-  .select-form {
-    margin-left: 470px;
-  }
-
-  /* Checkout */
-
-  .check-parent,
-  .contact-parent {
-    display: flex;
-  }
-
-  .check-large-right,
-  .check-large-left,
-  .contact-info,
-  .contact-form__section {
-    width: 50%;
-  }
-
-  .check-large-left {
-    margin-left: 50px;
-  }
-
-  .contact-info {
-    margin-left: 300px;
-    font-size: 24px;
-  }
-
-  .open {
-    padding-top: 60px;
-    font-size: 16px;
-  }
-
-  .acc-form {
-    padding-top: 80px;
-  }
-
-  .contact-form__section {
-    margin: 0 80px;
-  }
-
-  .contact-form__section input,
-  .contact-form__section .textarea {
-    width: 350px;
-  }
-
-  .checkout-form {
-    width: 300px;
-  }
-
-  .contact-main {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .about-parent p {
-    font-size: 26px;
-  }
-
-  .about-cta p {
-    font-size: 44px;
-    margin-bottom: 30px;
-  }
-
-  .footer-bot {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-}

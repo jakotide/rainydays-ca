@@ -3,11 +3,10 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Poppins:wght@400;600;900&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&
+    family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,22 +16,31 @@
   </head>
 
   <body>
-    <!-- Navbar/Header -->
 
-    <header class="header">
-      <nav>
-        <a class="logo" href="index.html">Rainy<span class="d">d</span>ays</a>
-        <input class="menu-button" type="checkbox" id="menu-button" />
-        <label class="menu-icon" for="menu-button"
-          ><span class="nav-icon"></span
-        ></label>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="nav-logo">Rainy<span class="d">d</span>ays</a>
 
-        <ul class="menu">
-          <li><a href="products.html">Men</a></li>
-          <li><a href="products.html">Women</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Sale</a></li>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Men</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Women</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Sale</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About Us</a>
+          </li>
         </ul>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
 
@@ -42,13 +50,19 @@
       <section class="hero">
         <div class="hero-img">
           <h1 class="hero-text">Pushing the Comfort Zone</h1>
+          <!-- <a class="cta-button" href="products.html">Men</a> -->
+          <div class="btn-header">
+            <a class="cta-button" href="products.html">Shop Men</a>
+            <a class="cta-button" href="products.html">Shop Women</a>
+          </div>
+       
         </div>
       </section>
-      <section class="cta">
+      <!-- <section class="cta">
         <p>Shop Now</p>
         <a class="cta-button" href="products.html">Men</a>
         <a class="cta-button" href="products.html">Women</a>
-      </section>
+      </section> -->
       <p class="mid-text-top">Be prepared for the journeys ahead</p>
 
       <!--Explore Jackets-->
@@ -186,5 +200,6 @@
         />
       </div>
     </footer>
+  <script src="js/script.js"></script>
   </body>
 </html>
