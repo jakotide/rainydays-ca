@@ -19,6 +19,7 @@
   <body>
 
     <header>
+      
       <nav class="navbar">
         <a href="#" class="nav-logo">Rainy<span class="d">d</span>ays</a>
 
@@ -169,56 +170,69 @@
           <i id="right" class="fa-solid fa-chevron-right"></i>
         </div>
       </div>
+      
   
-      <p class="mid-text">Our jackets are durable and sustainable.</p>
+      <p class="mid-text">Sustainable, durable and eco-friendly. We believe that fashion shouldn't come at the cost of the environment or the people who make it. </p>
+      <div class="eco-group">
+        <i class="fa-solid fa-recycle fa-2x"></i>
+        <i class="fa-solid fa-leaf fa-2x"></i>
+      </div>
 
       <!-- Sale/About us -->'
-      <div class="about-section">
-      <section class="about-container">
-        <div class="about-block">
-          <a class="about-link" href="about.html">
-            <img
-              src="images/mountain.jpg"
-              alt="Couple looking towards a mountain"
-            />
-            <h2>About Us</h2>
-          </a>
+    
+     
+        <div class="about-card">
+          <div class="background-img-about">
+            <img src="/images/pexels-yaroslav-shuraev-4762467.jpg">
+          </div>
+          <div class="background-img-about">
+          <img src="images/mountain.jpg" alt="Couple looking towards a mountain"/>
         </div>
-        <div class="about-block">
-          <a class="about-link" href="products.html"
-            ><img
-              src="images/accessories.jpg"
-              alt="Man standing in the rain with rainwear on"
-            />
-            <h2>Sale</h2></a
-          >
+          <div class="about-text">
+            <h3>About Us</h3>
+            <p>Learn more about our vision</p>
+          </div>
         </div>
-      </section>
-    </div>
+
+      
       <!-- New in -->
       <p class="new-in">New in</p>
 
      
-      <!-- Discover/Fall -->
-      <section class="fall-section">
-        <h2>Fall is coming</h2>
-        <img class="orange" src="images/orange.svg" alt="Orange design line" />
-        <p>
-          Raincoats is a must when fall is approaching and the rain pours down.
-          Our new range of women raincoats are tailor made for this purpose and
-          will keep you warm and dry.
-        </p>
-        <a class="disc-btn" href="products.html"> Discover more</a>
-      </section> 
-
-      <!-- Customer reviews -->
-      <section class="reviews">
-        <h3>Customer reviews:</h3>
-        <img src="images/stars.svg" alt="Five stars" />
-        <p>"The jacket is awesome! High quality to a nice price!"</p>
-        <div>-Tobias, 32y.</div>
+      <section class="review-section">
+        <div class="review-carousel" data-carousel>
+          <button class="review-button prev" data-carousel-button="prev">&#8592;</button>
+          <button class="review-button next" data-carousel-button="next">&#8594;</button>
+          <ul data-slides>
+            <li class="review-slide" data-active> 
+              <h3>Customer reviews</h3>
+              <img class="stars" src="images/stars.svg" alt="Five stars"/>
+              <p>"I'm absolutely in love with this jacket. It's so warm and cozy, yet still lightweight and easy to move around in."</p>
+              <div>-Tobias, 32y.</div>
+            </li>
+            <li class="review-slide"> 
+              <h3>Customer reviews</h3>
+              <img class="stars" src="images/stars.svg" alt="Five stars"/>
+              <p>"I love this jacket! It's lightweight and comfortable, yet still provides excellent protection against wind and rain. The color is beautiful and the fit is just right."</p>
+              <div>-Madicken, 28y.</div>
+            </li>
+            <li class="review-slide"> 
+              <h3>Customer reviews</h3>
+              <img class="stars" src="images/stars.svg" alt="Five stars"/>
+              <p>"Wow, what a great jacket! I was hesitant to spend this much money on a jacket, but I'm so glad I did. It's clearly well-made and feels like it will last for years to come. "</p>
+              <div>-Jonas, 38y.</div>
+            </li>
+          </ul>
+        </div>  
       </section>
+
     </main>
+
+
+
+     </div>
+      
+    </div>
 
    
 
@@ -238,6 +252,7 @@
         />
       </div>
     </footer>
+  <script src="/js/components/reviews.js" defer></script>
   <script src="js/components/carousel.js" defer></script>  
   <script src="js/script.js" defer></script>
   </body>
