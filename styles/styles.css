@@ -68,22 +68,22 @@ Fonts
   font-family: Playfair display, sans-serif;
 }
 
+
 /* Navbar */
 
 header {
-  background-color: var(--clr-green);
+  background-color: rgba(31, 96, 92, 0.408);
   position: fixed;
   z-index: 30;
   width: 100%;
   top: 0;
   left: 0;
-  box-shadow: 1px 14px 6px 3px rgba(51, 51, 51, 0.11);
-  /* -webkit-box-shadow: 1px 14px 5px 1px rgba(0,0,0,0.15);
+  transition: background-color 0.4s ease-in-out;
+  /* box-shadow: 1px 14px 6px 3px rgba(51, 51, 51, 0.11);
+  -webkit-box-shadow: 1px 14px 5px 1px rgba(0,0,0,0.15);
   -moz-box-shadow: 1px 14px 5px 1px rgba(0,0,0,0.15); */
-  
-
-
 }
+
 
 li {
   list-style: none;
@@ -99,7 +99,7 @@ header nav a::after {
   display: block;
   width: 0;
   height: 1px;
-  background: #fffcfc;
+  background: var(--clr-green);
   transition: width .2s ease-in;
 }
 
@@ -155,6 +155,35 @@ header nav a:hover::after {
   background-color: var(--clr-white);
 }
 
+.bar-scrolled {
+  background-color: var(--clr-green);
+}
+
+nav i {
+   color: var(--clr-white);
+   margin-right: 2em;
+}
+
+.header-scrolled {
+  background-color: var(--clr-white);
+  color: var(--clr-green);
+  box-shadow: 1px 10px 6px 3px rgba(126, 126, 126, 0.8);
+  -webkit-box-shadow: 1px 10px 5px 1px rgba(117, 117, 117, 0.15);
+  -moz-box-shadow: 1px 10px 5px 1px rgba(88, 88, 88, 0.15);
+}
+
+.header-scrolled nav a {
+  color: var(--clr-green);
+}
+
+.header-scrolled nav i {
+  color: var(--clr-green);
+}
+
+.header-scrolled nav div .bar {
+  color: var(--clr-green);
+}
+
 
 /*----------------
 Main
@@ -181,20 +210,6 @@ Main
   max-width: 900px;
 }
 
-/* .cta {
-  padding-top: 42px;
-  text-align: center;
-} */
-
-/* .cta-button,
-.ps-buy,
-.buy-button,
-.success-btn {
-  background-color: #1f605c;
-  display: block;
-  text-align: center;
-} */
-
 .btn-header {
   position: absolute;
   text-align: center;
@@ -204,7 +219,6 @@ Main
   display: flex;
   gap: 1em;
 }
-
 
  .cta-button {
   text-align: center;
@@ -267,44 +281,70 @@ Main
   margin: 10rem auto;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
-  width: 1000px;
-
+  justify-content: center;
+  gap: 4rem;
+  max-width: 900px;
+  
 }
 
 .about-card img {
-  height: 350px;
-  width: 350px;
   object-fit: cover;
+  margin: auto;
 }
 
 .about-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  text-align: left;
+  color: var(--clr-green);
+  line-height: 2rem;
+  width: calc(100% / 2);
+  font-family: var(--ff-sec);
+  font-size: 1.1rem;
 }
 
-.about-text h2 {
-  text-align: left;
+.learn-more {
+  margin-top: 25px;
+  font-weight: var(--fw-bold);
 }
 
 .background-img-about {
   background-color: #000;
-  height: 350px;
-  width: 350px;
+  height: 400px;
+  width: calc(100% / 2);
+  object-fit: cover;
   z-index:10;
-  transition: transform .5s ease;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
+  position: relative;
+  transition: transform 2s ease-in;
+    -webkit-transition: 2s;
+    -moz-transition: 2s;
     overflow: hidden;
+    
 }
 
 .about-card img:hover {
   z-index: 5;
   opacity: 0.3;
   transform: scale(1.2);
-  transition: transform .5s ease;
+  transition: transform 2s ease;
+}
+
+.about-img-h3 {
+  position: absolute;
+  z-index: 9;
+  color: var(--clr-white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  
+}
+
+.bold {
+  font-weight: var(--fw-bold);
 }
 
 /* CARD CONTAINER */
@@ -1068,14 +1108,6 @@ Media querys
     padding-top: 50px;
   }
 
-  .cta-button:hover,
-  .disc-btn:hover,
-  .ps-buy:hover,
-  .buy-button:hover,
-  .success-btn:hover {
-    background-color: #fa7455;
-    color: white;
-  }
 
   .about-cta p {
     font-size: 37px;
@@ -1143,5 +1175,9 @@ Media querys
   .hero-text {
     font-size: 3rem;
     padding-top: 80px;
+  }
+
+  .cta-button {
+   margin-bottom: 40px;
   }
 }
