@@ -78,7 +78,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  transition: background-color 0.4s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
 
 header.clicked {
@@ -106,7 +106,7 @@ header nav a::after {
   width: 0;
   height: 1px;
   background: var(--clr-white);
-  transition: width .2s ease-in;
+  transition: width .3s ease-in;
 }
 
 header nav a:hover::after {
@@ -132,6 +132,8 @@ header nav a:hover::after {
 .nav-menu.scrolled {
   color: var(--clr-green);
   background-color: var(--clr-white);
+  border-bottom: 0.1px solid var(--clr-green);
+  
 }
 
 .nav-logo {
@@ -160,8 +162,8 @@ header nav a:hover::after {
   width: 20px;
   height: 3px;
   margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   background-color: var(--clr-white);
 }
 
@@ -200,7 +202,7 @@ nav i {
   width: 0;
   height: 1px;
   background: var(--clr-green);
-  transition: width .2s ease-in;
+  transition: width .4s ease-in;
 }
 
 .header-scrolled nav a:hover::after {
@@ -228,12 +230,13 @@ Main
 .hero-text {
   position: absolute;
   text-align: left;
-  margin: 3rem clamp(0.5rem, 8vw, 38rem);
+  margin: 5.2rem clamp(0.5rem, 8vw, 38rem);
   color: white;
   font-family: var(--ff-sec);
   font-weight: var(--fw-xbold);
   font-size: clamp(1rem, 9vw + 1rem, 8rem);
   max-width: 900px;
+  line-height: 9rem;
 }
 
 .btn-header {
@@ -304,15 +307,14 @@ Main
 
 /* About Us Main */
 
-.about-card {
-  margin: 10rem auto;
+.about-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 4rem;
-  max-width: 900px;
-  padding: 0 50px;
-  height: 350px;
+  max-width: 1200px;
+  margin: 10rem auto;
+  padding: 0 30px;
 }
 
 .about-img-link {
@@ -322,7 +324,9 @@ Main
 
 .about-img {
   object-fit: cover;
-  margin: auto;
+  width: 400px;
+  height: 400px;
+  transition: 1s ease-in;
 }
 
 .about-text {
@@ -336,34 +340,41 @@ Main
   font-family: var(--ff-sec);
   font-size: 1.1rem;
   height: 350px;
+  width: 420px;
+  margin-top: 20px;
 }
 
 .learn-more {
   margin-top: 25px;
   font-weight: var(--fw-bold);
+  text-decoration: none;
+  color: var(--clr-green);
 }
 
 .background-img-about {
   background-color: #000;
-  /* height: 350px; */
-  width: calc(100% / 2);
+  width: 400px;
   object-fit: cover;
   z-index:10;
   position: relative;
   transition: transform 2s ease-in;
   -webkit-transition: 2s;
   -moz-transition: 2s;
-  overflow: hidden;  
+  overflow: hidden;
+  cursor: pointer;  
 }
 
-.about-img:hover {
-  /* z-index: 5; */
-  opacity: 0.3;
-  transform: scale(1.2);
-  transition: transform 2s ease;
+.background-img-about:hover a {
+  transition: 2s ease-in;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
 }
 
-.about-link {
+.about-learn-more:hover {
+  transition: 1s ease-in;
+}
+
+.about-learn-more {
   position: absolute;
   z-index: 9;
   color: var(--clr-white);
@@ -375,27 +386,18 @@ Main
   transition: 1s ease-in;
 }
 
-.about-link:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
 
-.about-link:hover .background-img-about img {
+.background-img-about:hover img {
   opacity: 0.3;
   transform: scale(1.2);
 }
 
-.background-img-about:hover .about-link {
+.background-img-about:hover .about-learn-more {
   opacity: 1;
 }
 
 .bold {
   font-weight: var(--fw-bold);
-}
-
-.about-link:hover + .about-img {
-  opacity: 0.3;
-  transform: scale(1.2);
 }
 
 /* CARD CONTAINER */
@@ -535,13 +537,21 @@ Main
 
 /* NEW IN */
 
+.new-wrapper {
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
 .new-in-container {
   display: flex;
   justify-content: center;
   overflow: hidden;
   max-width: 1400px;
-  padding: 10px 50px;
+  padding: 10px 35px;
   margin: auto;
+
 }
 
 .new-product-card {
@@ -558,6 +568,7 @@ Main
 
 .new-product-card:hover .card-btn {
   opacity: 0.9;
+  transition: 0.5s;
 }
 
 
@@ -570,6 +581,7 @@ Main
   align-items: center;
   padding: 0 50px;
   max-width: 1200px;
+  gap: 1rem;
 }
 
 .newsletter-form {
@@ -616,278 +628,6 @@ Main
   color: var(--clr-green);
 }
 
-
-/*----------- 
-Products Page
-------------*/
-
-.container {
-  max-width: 670px;
-  margin: 0 auto;
-}
-
-.products-h1 {
-  font-size: 1.6em;
-  word-spacing: 4px;
-}
-
-.select-form {
-  margin: 0 0 30px 35px;
-  width: 200px;
-}
-
-.selecter {
-  color: #1f605c;
-  border: none;
-  margin-left: 5px;
-  text-decoration: underline;
-  width: 65px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.label-products {
-  font-size: 14px;
-}
-
-.block p,
-.block div {
-  color: #1f605c;
-}
-
-/*-----------
-Product Specific Page
-------------*/
-
-.ps-main {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.block-specific {
-  display: inline-block;
-  width: 65%;
-  height: 250px;
-  border: solid 1px #1f605c;
-  margin: 120px 0 30px 0;
-}
-
-.img-specific {
-  width: 180px;
-  height: 210px;
-  padding: 10px 0px 0px 0px;
-}
-
-.jacket-info,
-.jacket-price {
-  border-bottom: #1f605c solid 1px;
-  font-size: 14px;
-  text-align: left;
-  padding: 0 50px;
-}
-
-.jacket-info div {
-  margin-bottom: 20px;
-}
-
-.jacket-info p {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.ps-jacket {
-  margin-top: 10px;
-  font-size: 16px;
-}
-
-.price,
-.price-checkout {
-  font-weight: bold;
-  font-size: 16px;
-  margin: 5px 0 10px 0;
-}
-
-.size-form {
-  border: #1f605c solid 1px;
-  border-top: none;
-  border-left: none;
-  padding: 10px 0 10px 0;
-  line-height: 30px;
-  width: 50%;
-  text-align: center;
-}
-
-.ps-buy {
-  width: 50%;
-  text-transform: uppercase;
-}
-
-.ps-buttons {
-  display: flex;
-  height: 50px;
-  margin-bottom: 35px;
-}
-
-.cart-text {
-  line-height: 50px;
-}
-
-/*-----------
-Checkout Page
--------------*/
-
-.main-checkout {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.order-summary {
-  font-size: 16px;
-  margin: 0 0 10px 50px;
-}
-
-.check-block {
-  width: 50%;
-  text-align: center;
-  border: solid 1px #1f605c;
-  margin: 0 0 0 50px;
-}
-
-.check-img {
-  width: 50%;
-  height: 5.5em;
-  padding: 10px 15px;
-  object-fit: contain;
-}
-
-.summary {
-  margin-bottom: 10px;
-  height: 130px;
-}
-
-.summary,
-.subtotal,
-.total {
-  display: flex;
-  align-items: center;
-  border-bottom: #1f605c solid 1px;
-}
-
-.summary-right {
-  width: 50%;
-  height: 120px;
-  margin: 10px 30px;
-  padding-top: 15px;
-  line-height: 30px;
-}
-
-.shipping {
-  text-align: center;
-  padding-bottom: 10px;
-  width: 50%;
-}
-
-.cost-shipping {
-  text-align: center;
-  padding-bottom: 10px;
-  width: 50%;
-}
-
-.subtotal {
-  margin-bottom: 20px;
-}
-
-.total {
-  height: 30px;
-  margin-bottom: 10px;
-}
-
-.total-text,
-.total-price {
-  text-align: center;
-  width: 50%;
-  padding-bottom: 15px;
-  font-size: 1.2em;
-}
-
-.total-price {
-  font-weight: bold;
-}
-
-.buy-button {
-  margin: 0 auto 20px;
-  font-weight: 600;
-  padding: 10px 0;
-  width: 75%;
-  text-transform: uppercase;
-  border-radius: 1px;
-}
-
-/*------------
-Success Page
--------------*/
-
-.success-p1,
-.success-p2 {
-  text-align: center;
-  margin: 40px auto 20px;
-  width: 50%;
-  font-size: 18px;
-}
-
-.success-btn {
-  width: 50%;
-  padding: 10px 0;
-  margin: 70px auto 150px;
-  border-radius: 4px;
-  max-width: 350px;
-}
-
-/*-----------
-About us/Sale
-------------*/
-
-.about-card {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-}
-
-.about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-  position: relative;
-  padding: 20px 50px;
-  max-width: 1600px;
-}
-
-.about-block {
-  height: 650px;
-  width: calc(100% / 2);
-}
-
-.about-block img {
-  height: 650px;
-  object-fit: cover;
-  margin-right: 40px;
-}
-
-.about-container a h2 {
-  position: absolute;
-  top: 45%;
-  text-decoration: none;
-  color: var(--clr-white);
-  font-size: 3rem;
-  font-weight: var(--fw-xbold);
-}
-
-.about-link {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-}
 
 /* REVIEWS */
 
@@ -980,7 +720,7 @@ About us/Sale
 .to-top {
   background-color: var(--clr-green);
   position: fixed;
-  bottom: 100px;
+  bottom: 300px;
   right: 32px;
   width: 40px;
   height: 40px;
@@ -993,6 +733,7 @@ About us/Sale
   transition: all .4s;
   text-decoration: none;
   cursor: pointer;
+  z-index: 1000;
 }
 
 .to-top.active {
@@ -1006,7 +747,7 @@ Footer
 -----------*/
 
 footer {
-  height: 400px;
+  height: 380px;
   border-top: 0.5px solid #d4cdcd;
   margin: 0 auto;
   color: #1f605c;
@@ -1183,25 +924,47 @@ Media querys
 
 @media screen  and (max-width: 950px) {
   .product-card {
-    
-    width: calc(100% / 2);
+    width: calc(100% / 2);  
   }
+
+  .new-product-card {
+    width: calc(100% / 2);
+    overflow: hidden;
+  }
+
+  .new-product-card:last-child {
+    display: none;
+  }
+
+  .mid-text-top {
+    font-size: 1.4rem
+  }
+
+
 
   /* footer */
 
   footer {
     gap: 17rem;
   }
+
+  .to-top {
+    right: 0;
+  }
+
+  .mid-text {
+    font-size: 1.3rem;
+    max-width: 500px;
+    padding: 0 30px;
+  }
 }
 
-
-@media (max-width: 769px) {
-
-  /* Navbar */
-  
+@media (max-width: 870px) {
   .hamburger {
     display: block;
     padding-right: 1rem;
+    order: 1;
+    margin-left: 5px;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -1219,18 +982,26 @@ Media querys
   .nav-menu {
     position: fixed;
     left: -100%; 
-    top:60px;
+    top:64px;
     gap: 2px;
     flex-direction: column;
     background-color: var(--clr-green);
-    width: 100%;
-    text-align: center;
+    width: 50%;
+    text-align: left;
     transition: 0.3s;
     z-index: 55;
   }
 
   .nav-item {
-    margin: 1em 0;
+    margin: 1em 35px 0 0;
+    padding-bottom: 14px;
+    border-bottom: 0.1px solid var(--clr-white);
+    width: 100%;
+  }
+
+  .nav-item:last-child {
+    border: none;
+    padding-bottom: 150px;
   }
 
   .nav-menu.active {
@@ -1239,11 +1010,57 @@ Media querys
 
   .nav-logo {
     padding-left: 1em;
+    order: 2;
+    margin: auto;
   }
 
   .log-in {
     display: block;
   }
+
+  .nav-user {
+    display: none;
+  }
+
+  .nav-cart {
+    order: 3;
+    margin-right: 5px;
+    margin-left: 35px;
+  }
+
+  header nav a:hover::after {
+    width: 0;
+  }
+
+  /* About Main */
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .hero-text {
+    line-height: 8rem;
+  }
+}
+
+@media (max-width: 769px) {
+
+  /* Newsletter */
+
+  .newsletter {
+    flex-direction: column;
+    gap:2rem;
+  }
+
+  .newsletter-sign {
+    
+    font-size: 1.2rem;
+  }
+
+  .to-top.active {
+    bottom: 20px;
+  }
+
 
   /* Main */
 
@@ -1254,8 +1071,7 @@ Media querys
   }
 
   .hero-text {
-
-    padding-top: 50px;
+    line-height: 7rem;
   }
 
 
@@ -1263,6 +1079,11 @@ Media querys
     font-size: 37px;
     margin-bottom: 30px;
   }
+
+  .mid-text-top {
+    font-size: 1.3rem
+  }
+
 
   /* Checkout Page */
 
@@ -1301,12 +1122,48 @@ Media querys
 
   footer {
     flex-direction: column;
-    gap: 5rem
+    gap: 3rem
   }
+
+  /* Review */
+
+
+  .review-slide p {
+    font-size: 1.2rem;
+  }
+
+  .review-slide h3 {
+    padding-bottom: 10px;
+  }
+
+  .review-slide div {
+    padding-bottom: 40px;
+  }
+
+  .newsletter-sign {
+    width: 350px;
+    
+  }
+
+
 
 @media screen  and (max-width: 650px) {
 
+  .hero-text {
+    line-height: 5.6rem;
+    padding-top: 20px;
+  }
 
+  .mid-text {
+    font-size: 1.1rem;
+    max-width: 500px;
+    padding: 0 30px;
+  }
+
+  .mid-text-top {
+    font-size: 1.2rem;
+    padding: 0 35px;
+  }
 
   .wrapper {
     overflow: hidden;
@@ -1317,6 +1174,15 @@ Media querys
     overflow: hidden;
   }
 
+  .new-product-card {
+    width: calc(100% / 1);
+    overflow: hidden;
+  }
+
+  .new-product-card:nth-child(2) {
+    display: none;
+  }
+
   .wrapper i:first-child {
     left: -13px;
   }
@@ -1324,17 +1190,69 @@ Media querys
   .wrapper i:last-child {
     right: -13px;
   }
+
+   /* Review */
+
+  .review-slide p {
+    font-size: 1rem;
+  }
+
+  .review-button {
+    font-size: 2.5rem;
+    top: 80%;
+  }
+
+  .review-button.next {
+    left: 55%;
+  }
+  
+  .review-button.prev {
+    left: 35%;
+  }
+
+  .about-section {
+    gap: 2rem;
+  }
 }
+}
+
+@media screen  and (max-width: 530px){
+  
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    height: 600px;
+    padding: 0 35px;
+  }
+
+  .about-text {
+    padding: 0 35px;
+    margin-top: 0;
+  }
+
+
+
 }
 
 @media screen  and (max-width: 400px){
 
   .hero-text {
     font-size: 3rem;
-    padding-top: 80px;
+    padding-top: 21px;
+    line-height: 4.5rem;
   }
 
   .cta-button {
    margin-bottom: 40px;
   }
+
+  footer {
+    gap: 2rem;
+  }
+
+  .newsletter-sign {
+    width: 264px;
+  }
+
 }

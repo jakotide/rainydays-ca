@@ -3,6 +3,8 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navBar = document.querySelector("header");
+const bars = document.querySelectorAll(".bar");
+const navMenuScrolled = document.querySelector(".nav-menu.scrolled")
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
@@ -27,7 +29,7 @@ document.addEventListener("scroll", () => {
 })
 
 document.addEventListener("scroll", () => {
-  if(window.scrollY > 0 ) {
+  if(window.scrollY > 0 && window.matchMedia("(max-width: 871px)").matches) {
     navMenu.classList.add("scrolled");
   } else {
     navMenu.classList.remove("scrolled");
@@ -41,7 +43,12 @@ document.addEventListener("click", () => {
     }
 })
 
-const bars = document.querySelectorAll(".bar");
+// window.addEventListener("scroll", () => {
+//   if(hamburger.classList.contains("active") && window.scrollY > 0) {
+//     navBar.classList.add("header-scrolled");
+//   }
+// })
+
 
 window.addEventListener("scroll", () => {
   if(window.scrollY > 0){
