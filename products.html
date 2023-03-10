@@ -3,127 +3,199 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Poppins:wght@400;600;900&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&
+    family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Have a look at Rainydays great display of quality jackets" />
-    <title>Buy Jackets For Men | Rainydays</title>
+    <meta name="description" content="Buy quality jackets from Rainydays" />
+    <title>Products Men | Rainydays</title>
   </head>
+<body>
 
-  <body>
-    <!-- Navbar/Header -->
-
-    <header class="header">
-      <a class="logo" href="index.html">Rainy<span class="d">d</span>ays</a>
-      <input class="menu-button" type="checkbox" id="menu-button" />
-      <label class="menu-icon" for="menu-button"
-        ><span class="nav-icon"></span
-      ></label>
-
-      <ul class="menu">
-        <li><a href="products.html">Men</a></li>
-        <li><a href="products.html">Women</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="products.html">Sale</a></li>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">Rainydays</a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="products.html" class="nav-link">Men</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Women</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Sale</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item log-in">
+          <a href="#" class="nav-link">Log in</a>
+        </li>
       </ul>
-    </header>
+      <i class="fa-regular fa-user nav-user"></i>
+      <i class="fa-solid fa-cart-shopping nav-cart"></i>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
 
-    <main class="main-productspage">
-      <h1 class="products-h1">Jackets For Men</h1>
-      <form class="select-form">
-        <label class="label-products" for="sort-by">Sort by:</label>
-        <select class="selecter" name="sort-by" id="sort-by">
-          <option value="Price">Price</option>
-          <option value="Most Popular">Most Popular</option>
-          <option value="New">New</option>
-          
-        </select>
-      </form>
+  <main>
 
-      <section class="container">
-               
-        <div class="block">
-          <a href="productspecific.html"> 
-            <img src="images/jacket1.jpg" alt="Red wind jacket">
-            <p>Wind Jacket - Red</p>
-            <div>59£</div>
-          </a> 
-        </div>
-        <div class="block">
-          <a href="productspecific.html"> 
-            <img src="images/jacket3.jpg" alt="Grey wind jacket" />
-            <p>Wind Jacket - Grey</p>
-            <div>59£</div>
-          </a>
+    <div class="product-hero">
+      <img class="product-header" src="/images/productpagered.jpg" alt="#">
+      <h1 class="product-h1">Men</h1>
+      <p>Explore our newest selection of men's outdoor jackets.</p>
+    </div>
+
+    <section class="product-container">
+      <div class="product-grid">
+        <div class="grid-product-card">
+          <div class="product-image">
+            <span class="image-tag">New In</span>
+            <img src="/images/red1.jpg" class="image-thumb" alt="#"> 
+            <a class="card-btn">Order Now</a>
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">Red - Sailor</h2>
+            <span class="card-price">£89.00</span>
+            <span class="actual-price">£129.00</span>
+          </div>
         </div> 
-        <div class="block">
-          <a href="productspecific.html">
-            <img src="images/jacket5.jpg" alt="Grey fall jacket" />
-            <p>Fall Jacket - Grey</p>
-            <div>59£</div>
-          </a>
+        <div class="grid-product-card">
+          <div class="product-image">
+            <span class="image-tag">New In</span>
+            <img src="/images/yellow1.jpg" class="image-thumb" alt="#"> 
+            <a class="card-btn">Order Now</a>
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">Orange - Cimalp</h2>
+            <span class="card-price">£89.00</span>
+            <span class="actual-price">£129.00</span>
+          </div>
         </div>
-        <div class="block">
-          <a href="productspecific.html">
-            <img src="images/jacket6.jpg" alt="Grey heavy jacket" />
-            <p>Heavy Jacket</p>
-            <div>59£</div>
-        </a>
+        <div class="grid-product-card">
+          <div class="product-image">
+            <span class="image-tag">New In</span>
+            <img src="/images/grey1.jpg" class="image-thumb" alt="#"> 
+            <a class="card-btn">Order Now</a>
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">Dark Grey - Desert</h2>
+            <span class="card-price">£89.00</span>
+            <span class="actual-price">£129.00</span>
+          </div>
         </div>
-        <div class="block">
-          <a href="productspecific.html">
-            <img src="images/jacket7.jpg" alt="Green fleece jacket" />
-            <p>Fleece Jacket</p>
-            <div>59£</div>
-          </a>
+        <div class="grid-product-card">
+          <div class="product-image">
+            <span class="image-tag">New In</span>
+            <img src="/images/bigyellow1.jpg" class="image-thumb" alt="#"> 
+            <a class="card-btn">Order Now</a>
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">Yellow - Snowy</h2>
+            <span class="card-price">£89.00</span>
+            <span class="actual-price">£129.00</span>
+          </div>
         </div>
-        <div class="block">
-          <a href="productspecific.html">
-            <img src="images/jacket6.jpg" alt="Grey jacket from the brand Scott" />
-            <p>Scott Jacket</p>
-            <div>59£</div>
-          </a>
+        <div class="grid-product-card">
+          <div class="product-image">
+            <span class="image-tag">New In</span>
+            <img src="/images/redwomen.jpg" class="image-thumb" alt="#"> 
+            <a class="card-btn">Order Now</a>
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">Red - Orca</h2>
+            <span class="card-price">£89.00</span>
+            <span class="actual-price">£129.00</span>
+          </div>
         </div>
-        <div class="block">
-          <a href="productspecific.html">
-            <img src="images/jacket5.jpg" alt="Grey city jacket" />
-            <p>Grey city Jacket</p>
-            <div>59£</div>
-          </a>
+        <div class="grid-product-card">
+          <div class="product-image">
+            <span class="image-tag">New In</span>
+            <img src="/images/green1.jpg" class="image-thumb" alt="#"> 
+            <a class="card-btn">Order Now</a>
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">Red - Orca</h2>
+            <span class="card-price">£89.00</span>
+            <span class="actual-price">£129.00</span>
+          </div>
         </div>
-        <div class="block">
-          <a href="productspecific.html">
-            <img src="images/jacket4.jpg" alt="Black jacket" />
-            <p>Thunder Jacket</p>
-            <div>59£</div>
-          </a>
+        <div class="grid-product-card">
+          <div class="product-image">
+            <span class="image-tag">New In</span>
+            <img src="/images/cool.jpg" class="image-thumb" alt="#"> 
+            <a class="card-btn">Order Now</a>
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">Red - Orca</h2>
+            <span class="card-price">£89.00</span>
+            <span class="actual-price">£129.00</span>
+          </div>
         </div>
-      </section>
-      <br></br>
-    </main>
+        <div class="grid-product-card">
+          <div class="product-image">
+            <span class="image-tag">New In</span>
+            <img src="/images/yellowwomen.jpg" class="image-thumb" alt="#"> 
+            <a class="card-btn">Order Now</a>
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">Red - Orca</h2>
+            <span class="card-price">£89.00</span>
+            <span class="actual-price">£129.00</span>
+          </div>
+        </div>
+        <div class="grid-product-card">
+          <div class="product-image">
+            <span class="image-tag">New In</span>
+            <img src="/images/yellowwomen.jpg" class="image-thumb" alt="#"> 
+            <a class="card-btn">Order Now</a>
+          </div>
+          <div class="product-info">
+            <h2 class="card-title">Red - Orca</h2>
+            <span class="card-price">£89.00</span>
+            <span class="actual-price">£129.00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <a href="#" class="to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </main>
 
-    <!-- Footer -->
-
-    <footer>
+  <footer>
+    <div class="footer-left">
       <ul>
         <li><a href="about.html"></a>About us</li>
         <li><a href="account.html"></a>My account</li>
         <li><a href="faq.html"></a>FAQ</li>
         <li><a href="contact.html"></a>Contact</li>
       </ul>
-      <p class="copyright">&copy; 2022 Rainy Days</p>
-      <div class="logo-parent">
-        <img
-          class="footer-logo"
-          src="images/logoblue.svg"
-          alt="Logo for Rainydays"
-        />
+      <p class="copyright">&copy; 2023 Rainy Days, Oslo - Norway</p>
+    </div>
+    <div class="footer-right">
+      <img class="footer-logo" src="images/logoblue.svg" alt="Logo for Rainy Days"/>
+      <div class="footer-payment">
+        <i class="fa-brands fa-cc-visa fa-2x"></i>
+        <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+        <i class="fa-brands fa-cc-paypal fa-2x"></i>
       </div>
-    </footer>
-  </body>
+      </div>
+    </div>
+  </footer>
+
+<script src="/js/components/reviews.js" defer></script>
+<script src="js/components/carousel.js" defer></script>  
+<script src="js/script.js" defer></script>
+</body>
 </html>
