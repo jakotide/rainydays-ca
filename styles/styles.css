@@ -127,13 +127,20 @@ header nav a:hover::after {
   align-items: center;
   gap: 5em;
   margin: auto;
+  
 }
 
 .nav-menu.scrolled {
   color: var(--clr-green);
   background-color: var(--clr-white);
-  border-bottom: 0.1px solid var(--clr-green);
-  
+}
+
+.nav-menu.scrolled li {
+  border-bottom: 1px solid var(--clr-green);
+}
+
+.nav-menu.scrolled li:last-child {
+  border-bottom: none;
 }
 
 .nav-logo {
@@ -407,11 +414,17 @@ Main
   justify-content: center;
   align-items: center;
   padding: 10px 35px;
+  touch-action: pan-x;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 .wrapper {
   max-width: 1600px;
   position: relative;
+  touch-action: pan-x;
+  touch-action: none;
+  -ms-touch-action: none;
 } 
 
 .caro-container .wrapper .carousel {
@@ -419,6 +432,8 @@ Main
   cursor: pointer;
   overflow: hidden;
   scroll-behavior: smooth;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 .caro-container .wrapper .carousel.dragging {
@@ -1001,7 +1016,7 @@ Media querys
 
   .nav-item:last-child {
     border: none;
-    padding-bottom: 150px;
+    padding-bottom: 500px;
   }
 
   .nav-menu.active {
@@ -1229,9 +1244,22 @@ Media querys
   .about-text {
     padding: 0 35px;
     margin-top: 0;
+    width: 350px;
   }
 
+  .background-img-about {
+    width: 350px;
+  }
 
+  .about-img {
+    width: 350px;
+  }
+
+  .hero-text {
+    font-size: 3.2rem;
+    padding-top: 21px;
+    line-height: 4.2rem;
+  }
 
 }
 
@@ -1240,7 +1268,7 @@ Media querys
   .hero-text {
     font-size: 3rem;
     padding-top: 21px;
-    line-height: 4.5rem;
+    /* line-height: 4.5rem; */
   }
 
   .cta-button {
