@@ -3,91 +3,106 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Poppins:wght@400;600;900&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800&
+    family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Product info" />
-    <title>Wind Jacket - Red | Rainydays</title>
+    <meta name="description" content="Buy quality jackets from Rainydays" />
+    <title>Products Men | Rainydays</title>
   </head>
+<body>
 
-  <body>
-    <!-- Navbar/Header -->
-
-    <header class="header">
-      <a class="logo" href="index.html">Rainy<span class="d">d</span>ays</a>
-      <input class="menu-button" type="checkbox" id="menu-button" />
-      <label class="menu-icon" for="menu-button"
-        ><span class="nav-icon"></span
-      ></label>
-
-      <ul class="menu">
-        <li><a href="products.html">Men</a></li>
-        <li><a href="products.html">Women</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="products.html">Sale</a></li>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-logo">Rainydays</a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="products.html" class="nav-link">Men</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Women</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Sale</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item log-in">
+          <a href="#" class="nav-link">Log in</a>
+        </li>
       </ul>
-    </header>
-
-    <main class="ps-main">
-      <section class="container">
-        <div class="block-specific">
-          <img
-            class="img-specific"
-            src="images/jacket1.jpg"
-            alt="Red wind jacket"
-          />
-        </div>
-      </section>
-      <div class="jacket-info">
-        <p>
-          A durable jacket that is windproof with a stretch fabric. The jacket
-          also has two front pockets. Velcro at cuffs, drawstrings at bottom,
-          back and neckline allows adjustment to perfect fit. Its also packable.
-        </p>
-        <div>100% Polyester</div>
+      <i class="fa-regular fa-user nav-user"></i>
+      <i class="fa-solid fa-cart-shopping nav-cart"></i>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
-      <div class="jacket-price">
-        <div class="ps-jacket">Wind Jacket- Red</div>
-        <div class="price">59£</div>
+    </nav>
+  </header>
+
+  <section class="specific-container">
+    <div class="specific-img-container">
+      <img class="img-item1" src="images/red1.jpg">
+      <div class="spec-img-flex">
+        <img class="img-item2" src="images/productpagered.jpg">
+        <img class="img-item3" src="images/red3.jpg">
       </div>
-
-      <div class="ps-buttons">
-        <form class="size-form">
-          <label class="label-products" for="size">Size:</label>
-          <select class="selecter" name="size" id="size">
-            <option value="Small">Small</option>
-            <option value="Medium">Medium</option>
-            <option value="Large">Large</option>
-          </select>
-        </form>
-        <a class="ps-buy" href="checkout.html"
-          ><span class="cart-text">Add to cart</span></a
-        >
+    </div>
+    <div class="specific-text-container">
+      <h1>Red - Sailor</h1>
+      <div class="specific-price">
+        <div class="card-price">£89</div>
+        <div class="specific-old-price">£129</div>
       </div>
-    </main>
+      <div class="size-b-container">
+        <div class="size-button">S</div>
+        <div class="size-button">M</div>
+        <div class="size-button">L</div>
+        <div class="size-button">XL</div>
+      </div>
+      <div class="specific-text">
+        <p>Introducing the perfect companion for those chilly outdoor evenings - Red - Sailor. Made from 100% polyester and crafted with a high collar. It comes with three pockets and elasticated cuffs.This jacket is both stylish and practical.</p>
 
-    <!-- Footer -->
+        <p>Designed in Oslo, this rugged jacket falls below the waist in a regular fit and has dropped shoulders for maximum comfort.</p>
 
-    <footer>
+        <p>The model in the picture is wearing a size M, which measures 77.50cm in length and has a height of 1.87m.</p>
+      </div>
+      <a class="cart-button">Add to cart</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-left">
       <ul>
-        <li><a href="about.html"></a>About us</li>
-        <li><a href="account.html"></a>My account</li>
-        <li><a href="faq.html"></a>FAQ</li>
-        <li><a href="contact.html"></a>Contact</li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="account.html">My account</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
       </ul>
-      <p class="copyright">&copy; 2022 Rainy Days</p>
-      <div class="logo-parent">
-        <img
-          class="footer-logo"
-          src="images/logoblue.svg"
-          alt="Logo for Rainydays"
-        />
+      <p class="copyright">&copy; 2023 Rainy Days, Oslo - Norway</p>
+    </div>
+    <div class="footer-right">
+      <img class="footer-logo" src="images/logoblue.svg" alt="Logo for Rainy Days"/>
+      <div class="footer-payment">
+        <i class="fa-brands fa-cc-visa fa-2x"></i>
+        <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+        <i class="fa-brands fa-cc-paypal fa-2x"></i>
       </div>
-    </footer>
-  </body>
+      </div>
+    </div>
+  </footer>
+
+<script src="/js/components/reviews.js" defer></script>
+<script src="js/components/carousel.js" defer></script>  
+<script src="js/script.js" defer></script>
+</body>
 </html>

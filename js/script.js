@@ -50,6 +50,7 @@ document.addEventListener("click", () => {
 // })
 
 
+
 window.addEventListener("scroll", () => {
   if(window.scrollY > 0){
     bars.forEach(bar => bar.classList.add("bar-scrolled"));
@@ -71,3 +72,5 @@ window.addEventListener("scroll", () =>  {
     toTopButton.classList.remove("active");
   }
 })
+
+

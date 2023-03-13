@@ -73,6 +73,8 @@ Fonts
 
 header {
   background-color: rgba(31, 96, 92, 0.408);
+ /* background-color: hsla(173, 4%, 41%, 0.408); */
+  background: linear-gradient(to bottom, rgba(63, 63, 63, 0.7), rgba(78, 78, 78, 0));
   position: fixed;
   z-index: 30;
   width: 100%;
@@ -87,6 +89,7 @@ header.clicked {
 
 .header-scrollClick {
   background-color: var(--clr-white);
+  background: none;
   color: var(--clr-green);
 }
 
@@ -186,6 +189,7 @@ nav i {
 .header-scrolled {
   background-color: var(--clr-white);
   color: var(--clr-green);
+  background: var(--clr-white);
   box-shadow: 1px 10px 6px 3px rgba(126, 126, 126, 0.8);
   -webkit-box-shadow: 1px 10px 5px 1px rgba(117, 117, 117, 0.15);
   -moz-box-shadow: 1px 10px 5px 1px rgba(88, 88, 88, 0.15);
@@ -794,6 +798,12 @@ footer ul {
   width: 100px;
 }
 
+footer ul li a {
+  text-decoration: none;
+  color: var(--clr-green);
+  cursor: pointer;
+}
+
 /* Product Page */
 
 .product-container {
@@ -817,7 +827,7 @@ footer ul {
 .product-hero {
   position: relative;
   margin-bottom: 300px;
-  height: 300px;
+  height: 350px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -829,7 +839,8 @@ footer ul {
   object-fit: cover;
   height: 350px;
   width: 100%;
-  object-position: 0px -279px;
+  object-position: 0 52%;
+  /* object-position: bottom 70px; */
 }
 
 .product-h1 {
@@ -845,71 +856,96 @@ footer ul {
   padding-top: 100px;
 }
 
-/*-------------
-About us page
---------------*/
-
-.abouth1,
-.contact-h1,
-.products-h1,
-.checkout-h1,
-.success-h1,
-.account-h1,
-.faq-h1 {
-  position: relative;
-  padding: 100px 0 20px 0;
-  color: #1f605c;
-  margin: 0 0 20px 0;
-  text-align: center;
+.product-info {
+  text-decoration: none;
 }
 
-.about-p,
-.about-cta p,
-.contact-info {
-  padding: 20px;
-  font-size: 14px;
-  text-align: left;
-  width: 80%;
-  margin: 0 auto 0 auto;
-  line-height: 28px;
+/* Specific Page */
+
+.specific-container {
+  max-width: 1200px;
+  margin: 200px auto;
+  display: flex;
+  gap: 3rem;
 }
 
-.img-about {
-  height: 40vh;
-  width: 80%;
-  margin: 10px auto;
-  background-position: center;
-  background-size: cover;
+.specific-img-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 700px;
+}
+
+.img-item1 {
+  object-fit: cover;
+  object-position: center 60%;
+  width: 700px;
+  height: 500px;
+}
+
+.img-item2, .img-item3 {
+  width: 342px;
+  height: 340px;
   object-fit: cover;
 }
 
-.about-cta {
-  height: 35vh;
+.spec-img-flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.specific-price {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 2rem;
+}
+
+.specific-old-price {
+  line-height: 4rem;
+  font-size: 1.3rem;
+  text-decoration: line-through;
+  color: var(--clr-grey);
+}
+
+.size-button {
+  border: 1px solid var(--clr-green);
+  color: var(--clr-green);
+  outline: var(--clr-green);
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  line-height: 27px;
+  text-align: center;
+  
+}
+
+.size-b-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.specific-text {
+  max-width: 300px;
+  color: var(--clr-green);
+}
+
+.specific-text p {
   margin: 20px 0 30px 0;
-  color: white;
 }
 
-.about-cta p {
-  font-size: 30px;
-  text-align: center;
-  line-height: 40px;
-  max-width: 420px;
+.cart-button {
+  padding: 10px 120px;
+  background-color: var(--clr-green);
+  color: var(--clr-white);
 }
+  
 
-.cnt-shop {
-  border: white solid 1px;
-  display: block;
-  margin: 15px auto 0;
-  width: 50%;
-  text-align: center;
-  padding: 7px;
-  font-family: roboto, sans-serif;
-  max-width: 330px;
-}
+/* About Us Page */
 
-.about-parent {
-  display: grid;
-  grid-template-columns: 4;
+.image-about-1 {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* FAQ */
@@ -937,42 +973,66 @@ About us page
 Contact Page
 -------------*/
 
-.contact-info div {
-  margin: 0 0 10px 15px;
+.contact-main {
+  display: flex;
+  max-width: 760px;
+  margin: 50px auto;
+  gap: 10rem;
+  /* align-items: center; */
+  justify-content: center;
 }
 
-.phone,
-.email {
-  font-weight: 600;
-  font-size: 16px;
+.contact-h1 {
+  color: var(--clr-green);
+  margin: 100px auto;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input {
+  border: .1px solid rgb(216, 216, 216);
+  margin-bottom: 8px;
+  width: 270px;
+}
+
+.contact-form textarea {
+  border: .1px solid rgb(216, 216, 216);
+  height: 70px;
+  margin-bottom: 8px;
+}
+
+.contact-form label {
+  font-size: .8rem;
+  margin-bottom: 4px;
+  color: var(--clr-green);
+}
+
+.contact-info div {
+  color: var(--clr-green);
+}
+
+.phone {
+  margin-top: 45px;
 }
 
 .open {
-  font-size: 12px;
+  margin-top: 70px;
+  font-weight: var(--fw-bold);
 }
 
-.contact-form,
-.acc-form {
-  display: flex;
-  flex-direction: column;
-  width: 74%;
-  margin: 20px auto 50px auto;
-  max-width: 500px;
+.send-btn {
+  background-color: var(--clr-green);
+  color: var(--clr-white);
+  padding: 10px;
 }
 
-.textarea {
-  height: 50px;
-}
-
-.send-btn,
-.acc-form button {
-  margin-top: 20px;
-  color: white;
-  background-color: #1f605c;
-  border: none;
-  padding: 12px;
-  font-size: 15px;
-  text-transform: uppercase;
+.send-btn:hover {
+  cursor: pointer;
+  background-color: #337c77;
 }
 
 /*-----------------
@@ -1006,8 +1066,6 @@ Media querys
   .mid-text-top {
     font-size: 1.4rem
   }
-
-
 
   /* footer */
 
@@ -1107,6 +1165,11 @@ Media querys
 
   .hero-text {
     line-height: 8rem;
+  }
+
+  .contact-main {
+    max-width: 600px;
+    gap: 4rem;
   }
 }
 
@@ -1210,7 +1273,8 @@ Media querys
   .newsletter-sign {
     width: 350px;
     
-  }
+  }  
+}
 
 
 
@@ -1280,8 +1344,43 @@ Media querys
   .about-section {
     gap: 2rem;
   }
+
+  .contact-main {
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 0;
+    width: 90%;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+    align-self: left;
+  }
+
+  .contact-info {
+    justify-content: left;
+    align-items: left;
+    align-self: left;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 40px;
+  }
+
+  .contact-form {
+    margin-bottom: 30px;
+  }
+
+  .contact-form textarea,
+  .contact-form input {
+    width: 100%;
+  }
+
+  .contact-h1 {
+    margin-bottom: 30px;
+  }
 }
-}
+
+
+
 
 @media screen  and (max-width: 530px){
   
@@ -1311,6 +1410,10 @@ Media querys
     font-size: 3.2rem;
     padding-top: 21px;
     line-height: 4.2rem;
+  }
+
+  .contact-main {
+    width: 90%;
   }
 
 }

@@ -33,7 +33,6 @@ const dragStart = (e) => {
   isDragStart = true;
   prevPageX = e.pageX || e.touches[0].pageX;
   prevScrollLeft = carousel.scrollLeft;
-  console.log("hello");
 }
 
 const dragging = (e) => {
@@ -53,9 +52,6 @@ const dragStop = () => {
   if(!isDragging) return;
   isDragging = false;
 }
-
-
-
 
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("touchstart", dragStart);
