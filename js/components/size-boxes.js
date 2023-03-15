@@ -1,10 +1,3 @@
-// const boxes = document.querySelectorAll(".size-button");
-
-// boxes.forEach((box) => {
-//   box.addEventListener("click", () => {
-//     box.classList.toggle("active");
-//   });
-// });
 
 const boxes = document.querySelectorAll(".size-button");
 
