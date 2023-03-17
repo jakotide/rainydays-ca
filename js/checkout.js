@@ -6,8 +6,6 @@ if (selectedSize) {
   sizeDisplay.innerText = selectedSize;
 }
 
-
-
 checkAccordion.forEach((check) => {
   check.addEventListener("click", () => {
     console.log("hello");
