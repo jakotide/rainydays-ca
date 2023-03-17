@@ -11,6 +11,8 @@ boxes.forEach((box) => {
     });
     // Toggle "active" class on clicked box
     box.classList.toggle("active");
+    localStorage.setItem("selectedSize", box.innerText);
+    console.log(`Selected size: ${localStorage.getItem("selectedSize")}`);
   });
 });
 
