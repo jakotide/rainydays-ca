@@ -348,7 +348,7 @@ Main
   object-fit: cover;
   width: 400px;
   height: 400px;
-  transition: 1s ease-in;
+  transition: .7s ease-in;
 }
 
 .about-text {
@@ -654,6 +654,22 @@ Main
   background-color: var(--clr-green);
   padding: 5px 10px;
   cursor: pointer;
+}
+
+.news-button:hover {
+  background-color: #337c77;
+}
+
+.newsletter-error {
+  color: rgb(231, 68, 68);
+  font-size: .8rem;
+  display: none;
+}
+
+.newsletter-success {
+  color: rgb(26, 141, 70);
+  font-size: .8rem;
+  display: none;
 }
 
 .news-checkbox {
@@ -1302,6 +1318,23 @@ Contact Page
 .send-btn:hover {
   cursor: pointer;
   background-color: #337c77;
+}
+
+.form-error-row {
+  display: flex;
+}
+
+.error {
+  color: rgb(231, 68, 68);
+  font-size: .8rem;
+  margin-left: 15px;
+  display: none;
+}
+
+.successMessage {
+  color: rgb(50, 138, 50);
+  font-size: .8rem;
+  display: none;
 }
 
 /* Account */

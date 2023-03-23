@@ -26,7 +26,7 @@
             <a href="products.html" class="nav-link">Men</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Women</a>
+            <a href="products.html" class="nav-link">Women</a>
           </li>
           <li class="nav-item">
             <a href="products.html" class="nav-link">Sale</a>
@@ -70,15 +70,28 @@
 
         <section class="contact-form__section">
           <form class="contact-form">
-            <label for="name">First Name</label>
+            <div class="form-error-row"> 
+              <label for="name">First Name*</label>
+              <div class="error" id="firstNameError">Please enter your name</div>
+            </div>
             <input type="text" id="firstname" />
-            <label for="name">Last Name</label>
+            <div class="form-error-row">
+              <label for="name">Last Name*</label>
+              <div class="error" id="lastNameError">Please enter your name</div>
+            </div>
             <input type="text" id="lastname" />
-            <label for="email">Email</label>
+            <div class="form-error-row">
+              <label for="email">Email*</label>
+              <div class="error" id="emailError">Please enter your email</div>
+            </div>
             <input type="text" id="email" />
-            <label for="message">Message</label>
+            <div class="form-error-row">
+              <label for="message">Message*</label>
+              <div class="error" id="textError">Please enter a message</div>
+            </div>
             <textarea class="textarea" id="message" name="message"></textarea>
             <input class="send-btn" type="submit" value="Send" />
+            <div class="successMessage">Your message has been sent!</div>
           </form>
         </section>
 
@@ -112,7 +125,7 @@
         </div>
       </div>
     </footer>
-
+  <script src="js/components/formvalidation.js" defer></script>
   <script src="js/script.js" defer></script>  
   </body>
 </html>

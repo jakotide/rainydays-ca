@@ -25,7 +25,7 @@
             <a href="products.html" class="nav-link">Men</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Women</a>
+            <a href="products.html" class="nav-link">Women</a>
           </li>
           <li class="nav-item">
             <a href="products.html" class="nav-link">Sale</a>
@@ -59,10 +59,16 @@
       </div>
 
       <div class="account-form">
-        <label for="email">Email</label>
-        <input type="email" name="email">
-        <label for="password">Password</label>
-        <input type="password" name="password">
+        <div class="form-error-row">
+          <label for="email">Email*</label>
+          <div class="error" id="accountEmailError">Please enter your email</div>
+        </div>
+        <input type="email" name="email" id="accountEmail">
+        <div class="form-error-row">
+          <label for="password">Password*</label>
+          <div class="error" id="passwordError">Your password must contain 8 letters</div>
+        </div>
+        <input type="password" name="password" id="password">
         <button class="account-btn">Log in</button>
         <div class="account-form-help">
           <p>Forgot password?</p>
@@ -95,7 +101,7 @@
       </div>
     </footer>
 
-
+    <script src="js/account.js" defer></script>
     <script src="js/script.js" defer></script>
     </body>
 </html>
