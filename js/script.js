@@ -48,14 +48,6 @@ document.addEventListener("click", () => {
     }
 })
 
-// window.addEventListener("scroll", () => {
-//   if(hamburger.classList.contains("active") && window.scrollY > 0) {
-//     navBar.classList.add("header-scrolled");
-//   }
-// })
-
-
-
 window.addEventListener("scroll", () => {
   if(window.scrollY > 0){
     bars.forEach(bar => bar.classList.add("bar-scrolled"));

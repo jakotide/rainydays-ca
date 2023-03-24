@@ -677,7 +677,7 @@ Main
   margin-top: 10px;
 }
 
-.news-checkbox p {
+.news-checkbox label {
   font-size: 0.8rem;
   margin-left: 5px;
   color: var(--clr-green);
