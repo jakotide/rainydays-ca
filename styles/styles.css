@@ -518,6 +518,10 @@ Main
   opacity: 0.9;
 }
 
+.grid-product-card:hover .card-btn {
+  opacity: 0.9;
+}
+
 .card-btn:hover {
   background: none;
   outline: var(--clr-white) solid 1px;
@@ -2541,7 +2545,7 @@ Media querys
   }
 
   .account-h1 {
-    top: 35%;
+    top: 25%;
   }
 
 }
@@ -2597,7 +2601,7 @@ Media querys
   }
 
   .cta-button {
-   margin-bottom: 40px;
+   margin-bottom: 60px;
   }
 
   footer {

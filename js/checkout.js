@@ -1,4 +1,5 @@
 const checkAccordion = document.querySelectorAll(".checkout-question");
+const checkoutPayNowBtn = document.querySelector(".checkoutpage-btn");
 
 const selectedSize = localStorage.getItem("selectedSize");
 if (selectedSize) {
@@ -12,3 +13,15 @@ checkAccordion.forEach((check) => {
     check.classList.toggle("active");
   });
 });
+
+
+
+
+function checkoutValidation(){
+  console.log("hello");
+}
+
+
+
+
+checkoutPayNowBtn.addEventListener("click", checkoutValidation);
