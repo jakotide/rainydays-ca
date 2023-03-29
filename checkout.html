@@ -64,19 +64,35 @@
         
         <div class="checkout-info-container">
           <div class="checkout-contact-info">
-            <label for="name">Name</label>
+            <div class="checkout-form-row">
+              <label for="name">Name*</label>
+              <p class="checkout-error" id="nameError">Please enter your full name.</p>
+            </div>
             <input type="name" id="name">
-            <label for="email">Email</label>
+            <div class="checkout-form-row">
+              <label for="email">Email*</label>
+              <p class="checkout-error" id="emailError">Please enter your email.</p>
+            </div>
             <input type="email" id="email">
-            <label for="address">Shipping Address</label>
+            <div class="checkout-form-row">
+              <label for="address">Shipping Address*</label>
+              <p class="checkout-error" id="addressError">Please enter your address.</p>
+            </div>
             <input type="text" id="address">
             <div class="checkout-postal">
               <div class="checkout-p-column">
-                <label for="postal">Postal Code</label>
+                <div class="checkout-form-row">
+                  <label for="postal">Postal Code</label>
+                  <p class="checkout-error" id="postalError">4 digits</p>
+                </div>
                 <input type="text" id="postal" pattern="[0-9]*">
               </div>
               <div class="checkout-p-column">
-                <label for="city">City</label>
+                <div class="checkout-form-row">
+                  <label for="city">City</label>
+                  <p class="checkout-error" id="cityError">Enter your city.</p>
+                </div>
+                <!-- <label for="city">City<span class="checkout-error" id="cityError">*</span></label> -->
                 <input type="text" id="city">
               </div>
             </div>

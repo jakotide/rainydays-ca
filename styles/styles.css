@@ -1648,6 +1648,17 @@ Contact Page
   font-weight: var(--fw-bold);
 }
 
+.checkout-form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.checkout-error {
+  color: rgb(231, 68, 68);
+  font-size: .8rem;
+  display: none;
+}
+
 /* Success Page */
 
 .success-header {
@@ -2495,7 +2506,7 @@ Media querys
   }
 
   .checkout-header h1 {
-    top: 28%;
+    top: 25%;
   }
 }
 
