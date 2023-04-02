@@ -100,3 +100,6 @@ function validateEmail(email) {
   return patternMatches;
 }
 
+
+
+

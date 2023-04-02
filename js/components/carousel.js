@@ -1,5 +1,6 @@
 const carousel = document.querySelector(".carousel");
-firstImg = carousel.querySelectorAll(".caro-container .wrapper .carousel .product-card")[0];
+// firstImg = carousel.querySelectorAll(".caro-container .wrapper .carousel .product-card")[0];
+firstImg = carousel.querySelector(".carousel img");
 arrowIcons = document.querySelectorAll(".wrapper i");
 
 let isDragStart = false, isDragging = false, prevPageX, prevPageY, prevScrollLeft, positionDiffX, positionDiffY;
