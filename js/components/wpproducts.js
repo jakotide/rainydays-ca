@@ -1,12 +1,15 @@
 const baseUrl = "http://rainydaystidemand.local/wp-json/wc/store/products";
-const productContainer = document.querySelector(".carousel");
+const productContainer = document.querySelector(".product-grid");
+const categories = document.querySelectorAll(".category");
+const searchButton = document.querySelector(".search-button");
+
 
 async function getProducts(url) {
   try {
       const response = await fetch(url);
       const results = await response.json();
       createHTML(results);
-    
+      console.log(results)
       
   } catch(error) {
     console.log(error)
@@ -18,17 +21,45 @@ getProducts(baseUrl);
 function createHTML(products) {
   console.log(products);
   products.forEach(function(product){
-    productContainer.innerHTML += `<div class="product-card">
+    productContainer.innerHTML += `<div class="grid-product-card">
     <div class="product-image">
-      <span class="image-tag">New In</span>
-      <a href="productspecific.html"><img src="${product.images[0].src}" class="image-thumb" alt="Model wearing the jacket, Red - Sailor"></a> 
-      <a  href="productspecific.html" class="card-btn">Order Now</a>
+      <div class="tag-group">
+      <span class="image-tag">${product.categories[0].name}</span>
+      </div>
+      <a href="productspecific.html?id=${product.id}">
+      <img src="${product.images[0].src}" class="image-thumb" alt="${product.images[0].alt}"> 
+      </a>
     </div>
-    <div class="product-info">
-      <a href="productspecific.html" class="no-underline"><h2 class="card-title">${product.name}</h2></a>
+    <a href="productspecific.html" class="product-info">
+      <h2 class="card-title">${product.name}</h2>
       <span class="card-price">£89.00</span>
       <span class="actual-price">£129.00</span>
-    </div>
+    </a>
   </div>`;
   });
 }
+
+categories.forEach(function(category) {
+  category.onclick = function(event) {
+    
+    let newUrl;
+    if (event.target.id === "featured") {   
+      console.log(event.target.id)
+      newUrl = baseUrl + "?featured=true";
+    } else {
+      const chosenCategory = event.target.value;
+      newUrl = baseUrl + `?category=${chosenCategory}`
+    }
+    productContainer.innerHTML = "";
+    getProducts(newUrl);
+  } 
+})
+
+
+searchButton.onclick = function(){
+  const searchInput = document.querySelector("#search-input").value;
+  let newUrl = baseUrl + `?search=${searchInput}`;
+
+  productContainer.innerHTML = "";
+  getProducts(newUrl);
+};

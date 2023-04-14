@@ -488,12 +488,28 @@ Main
   object-fit: cover;
 }
 
+.tag-group {
+  display: flex;
+  flex-direction: column;
+}
+
 .image-tag {
   position: absolute;
   color: var(--clr-white);
   font-size: 0.7rem;
   background-color: var(--clr-grey);
   padding: 12px 15px;
+  
+}
+
+.image-tag2 {
+  position: absolute;
+  color: var(--clr-white);
+  font-size: 0.7rem;
+  background-color: var(--clr-green);
+  padding: 12px 15px;
+  left: calc(14% + 15px);
+  /* display: none; */
 }
 
 .card-btn {
@@ -684,6 +700,40 @@ Main
 .news-checkbox label {
   font-size: 0.8rem;
   margin-left: 5px;
+  color: var(--clr-green);
+}
+
+/* WP */
+
+.search-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-input {
+  margin: 0 40px 40px 0;
+  font-size: 0.8rem;
+  border: #1f605c solid 0.5px;
+}
+
+#search-input {
+  border: none;
+}
+
+.search-button {
+  font-size: 0.8rem;
+  border: none;
+  color: white;
+  background-color: #1f605c;
+}
+
+.catergories {
+  margin: 0 0 30px 20px;
+}
+
+.catergories label {
+  font-size: 0.8rem;
+  margin-left: 15px;
   color: var(--clr-green);
 }
 

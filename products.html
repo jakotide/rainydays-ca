@@ -51,7 +51,7 @@
   <main>
 
     <div class="product-hero">
-      <img class="product-header" src="/newimages/forest.webp" alt="#"> 
+      <img class="product-header" src="newimages/forest.webp" alt="#"> 
       <h1 class="product-h1">Men</h1>
       <p class="product-hero-p">Explore our newest selection of men's outdoor jackets.</p>
     </div>
@@ -66,10 +66,30 @@
         <li>/</li>
         <li>Men</li>
       </ul>
+
+
+      <div class="search-container">
+        <div class="catergories">
+          <label for="featured">Featured</label>
+          <input id="featured" class="category" name="featured" type="radio" value="true">
+          <label for="winter">Winter</label>
+          <input id="winter" class="category" name="featured" type="radio" value="16">
+          <label for="rain">Rain</label>
+          <input id="rain" class="category" name="featured" type="radio" value="17">
+          <label for="wind">Wind</label>
+          <input id="wind" class="category" name="featured" type="radio" value="18">   
+        </div>
+  
+        <div class="search-input">
+          <input type="search" id="search-input"/>
+          <button class="search-button">Search</button>
+        </div>
+      </div>
+  
       
       <div class="product-grid">
 
-        <div class="grid-product-card">
+        <!-- <div class="grid-product-card">
           <div class="product-image">
             <span class="image-tag">New In</span>
             <a href="productspecific.html">
@@ -175,7 +195,7 @@
             <span class="card-price">£89.00</span>
             
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     
@@ -207,7 +227,7 @@
     </div>
   </footer>
 
-  
+  <script src="js/components/wpproducts.js" defer></script>  
 <script src="js/script.js" defer></script>
 </body>
 </html>
