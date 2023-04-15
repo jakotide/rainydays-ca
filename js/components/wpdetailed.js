@@ -108,8 +108,8 @@ function createHTML(product){
   <div class="specific-img-container">
       <img class="img-item1" src="${product.images[0].src}" alt="${product.images[0].alt}">
       <div class="spec-img-flex">
-        <img class="img-item2" src="images/productpagered.jpg" alt="Model wearing the jacket - Red - Sailor, front">
-        <img class="img-item3" src="images/red3.jpg" alt="Model wearing the jacket - Red - Sailor, behind">
+        <img class="img-item2" src="${product.images[1].src}" alt="${product.images[1].alt}">
+        <img class="img-item3" src="${product.images[2].src}" alt="${product.images[2].alt}">
       </div>
     </div>
     <div class="specific-text-container">
@@ -126,11 +126,7 @@ function createHTML(product){
     </div>
     <a class="cart-button">ADD TO CART</a>
       <div class="specific-text">
-        <p>Introducing the perfect companion for those chilly outdoor evenings - Red - Sailor. Made from 100% polyester and crafted with a high collar. It comes with three pockets and elasticated cuffs.This jacket is both stylish and practical.</p>
-
-        <p>Designed in Oslo, this rugged jacket falls below the waist in a regular fit and has dropped shoulders for maximum comfort.</p>
-
-        <p class="specific-last-p">The model in the picture is wearing a size M, which measures 77.50cm in length and has a height of 1.87m.</p>
+        ${product.description}
       </div>
     </div>`
 };

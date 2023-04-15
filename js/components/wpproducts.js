@@ -24,7 +24,7 @@ function createHTML(products) {
     productContainer.innerHTML += `<div class="grid-product-card">
     <div class="product-image">
       <div class="tag-group">
-      <span class="image-tag">${product.categories[0].name}</span>
+      <span class="image-tag">${product.tags[0].name}</span>
       </div>
       <a href="productspecific.html?id=${product.id}">
       <img src="${product.images[0].src}" class="image-thumb" alt="${product.images[0].alt}"> 
@@ -32,8 +32,8 @@ function createHTML(products) {
     </div>
     <a href="productspecific.html" class="product-info">
       <h2 class="card-title">${product.name}</h2>
-      <span class="card-price">£89.00</span>
-      <span class="actual-price">£129.00</span>
+      <span class="card-price">£${product.prices.sale_price}</span>
+      <span class="actual-price">£${product.prices.regular_price}</span>
     </a>
   </div>`;
   });
