@@ -16,6 +16,21 @@ const postalError = document.querySelector("#postalError");
 const city = document.querySelector("#city");
 const cityError = document.querySelector("#cityError");
 
+const payNowContainer = document.querySelector(".pay-now")
+const imageContainer = document.querySelector(".order-image");
+const orderTitle = document.querySelector(".order-title");
+const orderPrice = document.querySelector(".order-price");
+const subPrice = document.querySelector(".subPrice");
+const totalPrice = document.querySelector(".totalPrice");
+
+const queryString = window.location.search;
+
+const params = new URLSearchParams(queryString);
+
+const id = params.get("id");
+
+const baseUrl = "http://rainydaystidemand.local/wp-json/wc/store/products/" + id;
+
 const selectedSize = localStorage.getItem("selectedSize");
 if (selectedSize) {
   const sizeDisplay = document.querySelector(".selected-size");
@@ -29,6 +44,32 @@ checkAccordion.forEach((check) => {
   });
 });
 
+
+async function getImage(){
+  try{
+    const response = await fetch(baseUrl);
+    const image = await response.json();
+    console.log(image);
+    createOrder(image);
+  }
+  catch(error){
+    console.log(error);
+    console.log("Failed to get product data. Check the URL and make sure the product ID is valid.");
+  }
+}
+
+getImage();
+
+function createOrder(product){
+  console.log(product)
+  imageContainer.innerHTML += `<img class="order-image" src="${product.images[0].src}" alt="Model wearing jacket">`;
+  orderTitle.innerHTML = `<div>${product.name}</div>`
+  orderPrice.innerHTML = `<div>£${product.prices.sale_price}` 
+  subPrice.innerHTML = `<div>£${product.prices.sale_price}`
+  totalPrice.innerHTML = `<div>£${product.prices.sale_price}`; 
+}
+
+createOrder();
 
 
 

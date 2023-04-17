@@ -63,3 +63,4 @@ searchButton.onclick = function(){
   productContainer.innerHTML = "";
   getProducts(newUrl);
 };
+
