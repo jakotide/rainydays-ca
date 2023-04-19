@@ -1,4 +1,4 @@
-const featuredUrl = "http://rainydaystidemand.local/wp-json/wc/store/products?featured=true";
+const featuredUrl = "https://rainydaystidemand.local/wp-json/wc/store/products?featured=true";
 const featuredContainer = document.querySelector(".featured-container");
 
 async function getFeatured(){

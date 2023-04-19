@@ -1,4 +1,4 @@
-const baseUrl = "http://rainydaystidemand.local/wp-json/wc/store/products";
+const baseUrl = "https://rainydaystidemand.local/wp-json/wc/store/products";
 const productContainer = document.querySelector(".product-grid");
 const categories = document.querySelectorAll(".category");
 const searchButton = document.querySelector(".search-button");
