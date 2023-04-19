@@ -10,7 +10,8 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-const baseUrl = "https://rainydaystidemand.local/wp-json/wc/store/products/" + id;
+// const baseUrl = "https://rainydaystidemand.local/wp-json/wc/store/products/" + id;
+const baseUrl = "https://wordpress.rainydays-jakob.no/wp-json/wc/store/products/" + id;
 
 
 async function getProduct(){
