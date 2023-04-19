@@ -3,13 +3,12 @@ const productContainer = document.querySelector(".product-grid");
 const categories = document.querySelectorAll(".category");
 const searchButton = document.querySelector(".search-button");
 
-
 async function getProducts(url) {
   try {
       const response = await fetch(url);
       const results = await response.json();
       createHTML(results);
-      console.log(results)
+      console.log(results)  
       
   } catch(error) {
     console.log(error)
@@ -41,7 +40,6 @@ function createHTML(products) {
 
 categories.forEach(function(category) {
   category.onclick = function(event) {
-    
     let newUrl;
     if (event.target.id === "featured") {   
       console.log(event.target.id)
@@ -63,4 +61,5 @@ searchButton.onclick = function(){
   productContainer.innerHTML = "";
   getProducts(newUrl);
 };
+
 
