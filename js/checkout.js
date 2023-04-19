@@ -29,7 +29,8 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-const baseUrl = "http://rainydaystidemand.local/wp-json/wc/store/products/" + id;
+// const baseUrl = "http://rainydaystidemand.local/wp-json/wc/store/products/" + id;
+const baseUrl = "https://wordpress.rainydays-jakob.no/wp-json/wc/store/products/" + id;
 
 const selectedSize = localStorage.getItem("selectedSize");
 if (selectedSize) {
