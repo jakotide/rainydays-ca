@@ -33,3 +33,9 @@ Clone the repository
 ## Contributing
 
 As this is a school project, it is not open for contributions.
+
+## Links
+
+Latest version of this site: [rainydays-jakob.netlify.app](https://rainydays-jakob.netlify.app/)
+
+My portfolio: [jakob-tidemand.netlify.app](https://jakob-tidemand.netlify.app)
