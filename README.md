@@ -1,4 +1,4 @@
-![rd1](https://github.com/jakotide/rainydays-ca/assets/111381232/31f21ef8-2877-44ba-9321-a2695ab911f4)
+![rd1](https://github.com/jakotide/rainydays-ca/assets/111381232/6fad0c97-0b0a-4a45-920e-dab27c03a293)
 
 # Rainy Days
 
